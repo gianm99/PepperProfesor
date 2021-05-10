@@ -1,0 +1,89 @@
+topic: ~preguntas()
+
+# Aquí poner la presentación del juego
+
+proposal: %INTRO
+
+# preguntar el tema del examen
+u: (vamos a jugar) %SELECCION
+Cuál quieres que sea el tema del examen? Matemáticas, Sociales o Castellano?
+    u1:(castellano)
+    De acuerdo, empecemos el examen de Castellano! %CASTELLANO
+    u1:(matematicas)
+    De acuerdo, empecemos el examen de Matemáticas! %MATEMATICAS
+    u1:(sociales)
+    De acuerdo, empecemos el examen de Sociales! %SOCIALES
+    u1: (*)
+    No te he entendido. %TEMA_INCORRECTO
+
+proposal: %PREGUNTA1
+Cuál es la palabra intrusa en esta familia? A Arena B Área C Arenal
+    u1:($r1)
+    $show="Correcto!" Muy bien, sigue así! %RERANDOMIZE
+    u1:(*)
+    $show="Incorrecto!" Vaya, es incorrecto! %RERANDOMIZE
+
+proposal: %PREGUNTA2
+En la oración La vieja fábrica qué función realiza la? A Determinante B Núcleo C Complemento
+    u1:($r2)
+    $show="Correcto!" Eso es, a tope! %RERANDOMIZE
+    u1:(*)
+    $show="Incorrecto!" Otra vez será %RERANDOMIZE
+
+proposal: %PREGUNTA3
+Cuál es el pretérito imperfecto del verbo haber? A Dijera o dijese B Dije C Dijere
+    u1:($r3)
+    $show="Correcto!" Exacto! %RERANDOMIZE
+    u1:(*)
+    $show="Incorrecto!" Vaya, parece que te has equivocado %RERANDOMIZE
+
+proposal: %PREGUNTA4
+Cuándo llevan tilde las palabras agudas? A Siempre. B Si terminan en consonante n,s. C Si terminan en consonante diferente a n o s.
+    u1:($r4)
+    $show="Correcto" Bingo! %RERANDOMIZE
+    u1:(*):
+    $show="Incorrecto!" Parece ser que no es así %RERANDOMIZE
+
+proposal: %PREGUNTA5
+Cuál de estas palabras lleva tilde? A Cartera B Párpado C Tenedor
+    u1:($r5)
+    $show="Correcto" Muy bien! %RERANDOMIZE
+    u1:(*):
+    $show="Incorrecto!" Otra vez será %RERANDOMIZE
+
+proposal: %PREGUNTA6
+Cuál es el femenino de la palabra alcaldesa?
+    u1:(Alcaldesa)
+    $show="Correcto" Exactamente! %RERANDOMIZE
+    u1:(*):
+    $show="Incorrecto!" Oh, no... %RERANDOMIZE
+
+proposal: %PREGUNTA7
+Cuál de estas palabras lleva tilde? A Cartera B Párpado C Tenedor
+    u1:($r7)
+    $show="Correcto" Muy bien! %RERANDOMIZE
+    u1:(*):
+    $show="Incorrecto!" Otra vez será %RERANDOMIZE
+
+proposal: %PREGUNTA8
+Cuál de estos sustantivos es propio? A Rebaño B Árbol C Andrés
+    u1:($r8)
+    $show="Correcto" Claro! %RERANDOMIZE
+    u1:(*):
+    $show="Incorrecto!" La próxima vez será %RERANDOMIZE
+
+proposal: %PREGUNTA9
+Cuál de estos sustantivos es propio? A Rebaño B Árbol C Andrés
+    u1:($r8)
+    $show="Correcto" Claro! %RERANDOMIZE
+    u1:(*):
+    $show="Incorrecto!" La próxima vez será %RERANDOMIZE
+
+proposal: %PREGUNTA10
+Qué palabra lleva hache? A Invierno B Horario
+    u1:($r8)
+    $show="Correcto" Sí! %RERANDOMIZE
+    u1:(*):
+    $show="Incorrecto!" Lo siento, pero no... %RERANDOMIZE
+
+proposal: %RESULTADOS
