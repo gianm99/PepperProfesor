@@ -1,21 +1,17 @@
 package com.igu.pepperprofesor;
 
 public enum Subject {
-    CASTELLANO(1, 40), MATEMATICAS(41, 81), SOCIALES(82, 135);
+    CASTELLANO(40),
+    MATEMATICAS(40),
+    SOCIALES(53);
 
-    private final int lower;
-    private final int upper;
+    private final int size;
 
-    Subject(int lower, int upper) {
-        this.lower = lower;
-        this.upper = upper;
+    Subject(int size) {
+        this.size = size;
     }
 
-    public int getLower() {
-        return lower;
-    }
-
-    public int getUpper() {
-        return upper;
+    public int getSize() {
+        return size;
     }
 }

@@ -79,7 +79,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
 
     private void changeSubject(Subject subject) {
         this.subject = subject;
-        questions = Utilities.randomQuestions(subject.getLower(), subject.getUpper(), N_QUESTIONS);
+        questions = Utilities.randomQuestions(1, subject.getSize(), N_QUESTIONS);
     }
 
     private void nextQuestion() {
@@ -107,7 +107,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     }
 
     private void goToQuestion(int numero) {
-        goToBookmark("PREGUNTA" + numero);
+        goToBookmark(subject.name() + numero);
     }
 
     private void goToResults() {
