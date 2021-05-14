@@ -24,7 +24,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     QiChatbot qiChatbot;
     Chat chat;
     public static final int N_QUESTIONS = 10;
-    private int[] questions;
+    private int[] questionNumbers;
     private int puntuacion;
     private int current;
 
@@ -79,16 +79,16 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
 
     private void changeSubject(Subject subject) {
         this.subject = subject;
-        questions = Utilities.randomQuestions(1, subject.getSize(), N_QUESTIONS);
+        questionNumbers = Utilities.randomQuestions(subject.getSize(), N_QUESTIONS);
     }
 
     private void nextQuestion() {
-        if (current < N_QUESTIONS) {
-            current++;
-            goToQuestion(questions[current]);
-        } else {
+        if (current == N_QUESTIONS) {
             goToResults();
+            return;
         }
+        current++;
+        goToQuestion(questionNumbers[current]);
     }
 
     @Override
