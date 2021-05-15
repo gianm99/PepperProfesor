@@ -1,4 +1,4 @@
-topic: ~preguntas()
+topic: ~preguntas ^resetOnFocus ()
 
 concept:(correcto) ^rand["Muy bien, sigue así!" "Eso es, a tope!" "Exacto!" "Bingo!" "Muy bien!" "Exactamente!" "Claro!" "Sí!" "Eso es correcto!" ]
 concept:(incorrecto) ^rand["Vaya, es incorrecto!" "Otra vez será" "Vaya, parece que te has equivocado" "Parece ser que no es así" "Oh, no..." "La próxima vez será" "Lo siento, pero no..." ]
@@ -648,9 +648,9 @@ Cuál fue el conflicto bélico más importante del siglo XX?
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %RESULTADOS #poner sonidos si se puede
-^first["$puntos<5 Ha ido mal el examen, has suspendido" "$puntos<7 Estás aprobado" "$puntos<9 Eso es un notable" "Eso es excelente!"] ^goto(FINAL)
+^first["$puntos<5 Ha ido mal el examen, has suspendido" "$puntos<7 Estás aprobado" "$puntos<9 Eso es un notable" "Eso es excelente!"] ^enableThenGoto(FINAL)
 
 proposal: %FINAL
 Genial, ya has terminado el examen! Quieres hacer otro examen o terminar aquí?
-    u1:(otro {examen}) %OTRO_EXAMEN # ^resetOnFocus no disponible en API 4 (?)
+    u1:(otro {examen}) %OTRO_EXAMEN ^enable(RESULTADOS)
     u1:(*) Hasta la próxima! Que tengas un buen día! ^releaseFocus
