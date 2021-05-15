@@ -12,7 +12,6 @@ import com.aldebaran.qi.sdk.builder.TopicBuilder;
 import com.aldebaran.qi.sdk.design.activity.RobotActivity;
 import com.aldebaran.qi.sdk.object.conversation.AutonomousReactionImportance;
 import com.aldebaran.qi.sdk.object.conversation.AutonomousReactionValidity;
-import com.aldebaran.qi.sdk.object.conversation.Bookmark;
 import com.aldebaran.qi.sdk.object.conversation.Chat;
 import com.aldebaran.qi.sdk.object.conversation.QiChatbot;
 import com.aldebaran.qi.sdk.object.conversation.Topic;
@@ -24,7 +23,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     QiChatbot qiChatbot;
     Chat chat;
     public static final int N_QUESTIONS = 10;
-    private int[] questions;
+    private int[] questionNumbers;
     private int puntuacion;
     private int current;
 
@@ -48,47 +47,61 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
 
     @Override
     public void onRobotFocusGained(QiContext qiContext) {
-        topic = TopicBuilder.with(qiContext).withResource(R.raw.preguntas).build();
-        qiChatbot = QiChatbotBuilder.with(qiContext).withTopic(topic).build();
-        qiChatbot.addOnBookmarkReachedListener(new QiChatbot.OnBookmarkReachedListener() {
-            @Override
-            public void onBookmarkReached(Bookmark bookmark) {
-                String name = bookmark.getName();
-                if ("CORRECTO".equals(name)) puntuacion++;
-                if ("CORRECTO".equals(name) || "INCORRECTO".equals(name)) {
-                    nextQuestion();
-                }
-                switch (name) {
-                    case "CASTELLANO":
-                        changeSubject(Subject.CASTELLANO);
-                        break;
-                    case "MATEMATICAS":
-                        changeSubject(Subject.MATEMATICAS);
-                        break;
-                    case "SOCIALES":
-                        changeSubject(Subject.SOCIALES);
-                        break;
-                    case "TEMA_INCORRECTO":
-                        goToSelection();
-                }
-            }
-        });
-        chat = ChatBuilder.with(qiContext).withChatbot(qiChatbot).build();
+        initChatbot(qiContext);
+        addListeners();
         chat.run();
     }
 
-    private void changeSubject(Subject subject) {
+    private void initChatbot(QiContext qiContext) {
+        topic = TopicBuilder.with(qiContext).withResource(R.raw.preguntas).build();
+        qiChatbot = QiChatbotBuilder.with(qiContext).withTopic(topic).build();
+        chat = ChatBuilder.with(qiContext).withChatbot(qiChatbot).build();
+    }
+
+    private void addListeners() {
+        qiChatbot.addOnBookmarkReachedListener(bookmark -> {
+            switch (bookmark.getName()) {
+                case "CASTELLANO":
+                    startSubject(Subject.CASTELLANO);
+                    break;
+                case "MATEMATICAS":
+                    startSubject(Subject.MATEMATICAS);
+                    break;
+                case "SOCIALES":
+                    startSubject(Subject.SOCIALES);
+                    break;
+                case "TEMA_INCORRECTO":
+                    goToSelection();
+                    break;
+                case "CORRECTO":
+                    puntuacion++;
+                    nextQuestion();
+                    break;
+                case "INCORRECTO":
+                    nextQuestion();
+                    break;
+            }
+        });
+        chat.addOnStartedListener(this::goToIntroduction);
+    }
+
+    private void goToIntroduction() {
+        goToBookmark("INTRO");
+    }
+
+    private void startSubject(Subject subject) {
         this.subject = subject;
-        questions = Utilities.randomQuestions(1, subject.getSize(), N_QUESTIONS);
+        questionNumbers = Utilities.randomQuestions(subject.getSize(), N_QUESTIONS);
+        nextQuestion();
     }
 
     private void nextQuestion() {
-        if (current < N_QUESTIONS) {
-            current++;
-            goToQuestion(questions[current]);
-        } else {
+        if (current == N_QUESTIONS) {
             goToResults();
+            return;
         }
+        goToQuestion(questionNumbers[current]);
+        current++;
     }
 
     @Override
@@ -99,7 +112,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
 
     @Override
     public void onRobotFocusRefused(String reason) {
-        Log.i(TAG, String.format("Focus recuperado por %s", reason));
+        Log.i(TAG, String.format("Focus rechazado por %s", reason));
     }
 
     private void goToSelection() {

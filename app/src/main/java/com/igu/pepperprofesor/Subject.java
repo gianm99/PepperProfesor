@@ -3,7 +3,7 @@ package com.igu.pepperprofesor;
 public enum Subject {
     CASTELLANO(40),
     MATEMATICAS(40),
-    SOCIALES(53);
+    SOCIALES(50);
 
     private final int size;
 

@@ -1,12 +1,13 @@
 topic: ~preguntas()
 
-# Aquí poner la presentación del juego
+concept:(correcto) ^rand["Muy bien, sigue así!" "Eso es, a tope!" "Exacto!" "Bingo!" "Muy bien!" "Exactamente!" "Claro!" "Sí!" "Eso es correcto!" ]
+concept:(incorrecto) ^rand["Vaya, es incorrecto!" "Otra vez será" "Vaya, parece que te has equivocado" "Parece ser que no es así" "Oh, no..." "La próxima vez será" "Lo siento, pero no..." ]
 
 proposal: %INTRO
+Buenos días, si quieres comprobar tu conocimiento sobre el castellano, las matemáticas o las ciencias sociales, este es tu juego! ^goto(SELECCION)
 
 # preguntar el tema del examen
-u: (vamos a jugar) %SELECCION
-Cuál quieres que sea el tema del examen? Matemáticas, Sociales o Castellano?
+u: (vamos a jugar) %SELECCION Cuál quieres que sea el tema del examen? Matemáticas, Sociales o Castellano?
     u1:(castellano)
     De acuerdo, empecemos el examen de Castellano! %CASTELLANO
     u1:(matematicas)
@@ -85,5 +86,355 @@ Qué palabra lleva hache? A Invierno B Horario
     $show="Correcto" Sí! %CORRECTO
     u1:(*):
     $show="Incorrecto!" Lo siento, pero no... %INCORRECTO
+
+proposal: %SOCIALES1
+Alrededor de qué tipo de astro orbitan los satélites?
+    u1:([planeta planetas])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES2
+Qué forma tiene la galaxia en la que se encuentra la Tierra?
+    u1:({en} espiral)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES3
+El sol es una estrella de tamaño enano, mediano o gigante?
+    u1:(enano)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES4
+En qué planeta del sistema solar a parte de la Tierra se encuentra el Monte Olimpo?
+    u1:({en} marte)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES5
+En qué año llegaron los humanos a la Luna?
+    u1:({"en {el}"} 1969)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES6
+Cómo se llaman las circunferencias imaginarias paralelas al Ecuador?
+    u1:([paralelo paralelos])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES7
+Cómo se llaman las circunferencias imaginarias que pasan por los Polos Norte y Sur?
+    u1:([meridiano meridianos])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES8
+Entre qué países están los Pirineos?
+    u1:(["españa y francia" "francia y españa"])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES9
+Cuál es el río más largo de España?
+    u1:({río} tajo)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES10
+Cuál es la montaña más alta de España?
+    u1:({el} teide)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES11
+Con qué océano está en contacto España?
+    u1:({océano} atlántico)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES12
+A qué continente pertenece Australia?
+    u1:(oceanía)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES13
+A qué continente pertenece Tailandia?
+    u1:(asia)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES14
+A qué continente pertenece Kenia?
+    u1:(áfrica)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES15
+A qué continente pertenece Suecia?
+    u1:(europa)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES16
+A qué continente pertenece Guatemala?
+    u1:(américa)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES17
+Cuál es el continente más grande del mundo?
+    u1:(asia)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES18
+Qué nombre reciben las aguas subterráneas?
+    u1:([acuífero acuíferos])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES19
+En qué unidades se miden la latitud y la longitud de un punto?
+    u1:([grado grados])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES20
+Cuál es la región más meridional de España?
+    u1:({islas} canarias)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES21
+Cuál es la capital de España?
+    u1:(madrid)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES22
+Cuál es la capital de Francia?
+    u1:(parís)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES23
+Cuál es la capital de Alemania?
+    u1:(berlín)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES24
+Cuál es la capital de Reino Unido?
+    u1:(londres)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES25
+Cuál es la capital de Estados Unidos?
+    u1:(washington *)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES26
+Cuál es la capital de Noruega?
+    u1:(oslo)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES27
+En qué año fue aprobada la Constitución española que tenemos actualmente?
+    u1:(1978)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES28
+Cuántas comunidades autónomas hay en España?
+    u1:(17)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES29
+Cuántas ciudades autónomas hay en España?
+    u1:(2)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES30
+Cuál es la comunidad autónoma más grande de España?
+    u1:(castilla y león)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES31
+Cuál es la comunidad autónoma más poblada de España?
+    u1:(andalucía)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES32
+Cuáles son los tres tipos de poder político que hay en España? Legislativo, judicial y...
+    u1:(ejecutivo)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES33
+Qué modelo de gobierno tiene España?
+    u1:(monarquía parlamentaria)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES34
+Qué lengua oficial hay en las Illes Balears aparte del castellano?
+    u1:(catalán)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES35
+Qué lengua oficial hay en el País Vasco aparte del castellano?
+    u1:(vasco)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES36
+Qué sector económico es el predominante en la economía de España?
+    u1:({sector} [terciario servicios])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES37
+En cuántas etapas se divide la historia según los expertos?
+    u1:(5)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES38
+Cómo se llaman los pueblos que no permanecían en sitios fijos y se trasladaban en busca de alimentos?
+    u1:(nómadas)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES39
+Cómo se llaman los pueblos que que dejaron de ir de un sitio a otro y se quedaron fijos en un sitio?
+    u1:(sedentarios)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES40
+Cómo llamaron los romanos a la península Ibérica?
+    u1:(hispania)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES41
+Qué idioma hablaban los romanos?
+    u1:(latín *)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES42
+En qué siglo se deshizo el Imperio romano?
+    u1:([v quinto 5])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES43
+Qué etapa histórica comienza con la aparición de la escritura?
+    u1:(edad antigua)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES44
+Qué etapa histórica comienza con la caída del imperio romano?
+    u1:(edad media)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES45
+Qué etapa histórica comienza tras el descubrimiento de América?
+    u1:(edad moderna)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES46
+Qué etapa histórica comienza tras la Revolución Francesa?
+    u1:(edad contemporánea)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES47
+A quién se le atribuye la invención de la imprenta?
+    u1:({johannes} guttenberg)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES48
+Cuál fue el invento que resultó esencial para el desarrollo de la Revolución Industrial?
+    u1:({la} máquina de vapor)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES49
+A qué inventor se le atribuye la invención del teléfono?
+    u1:({alexander} graham bell)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal:%SOCIALES50
+Cuál fue el conflicto bélico más importante del siglo XX?
+    u1:(segunda guerra mundial)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %RESULTADOS
