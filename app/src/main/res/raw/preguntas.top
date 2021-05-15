@@ -32,7 +32,7 @@ En la oración La vieja fábrica qué función realiza la? A Determinante B Núc
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %CASTELLANO3
-Cuál es el pretérito imperfecto del verbo haber? A Dijera o dijese B Dije C Dijere
+Cuál es el pretérito imperfecto de subjuntivo del verbo decir? A Dijera o dijese B Dije C Dijere
     u1:(Dijera o dijese)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
