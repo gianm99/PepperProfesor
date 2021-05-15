@@ -1,14 +1,13 @@
 topic: ~preguntas()
 
-concept:(correcto) ^rand["Muy bien, sigue así!" "Eso es, a tope!" "Exacto!" "Bingo!" "Muy bien!" "Exactamente!" "Claro!" "Sí!" ]
+concept:(correcto) ^rand["Muy bien, sigue así!" "Eso es, a tope!" "Exacto!" "Bingo!" "Muy bien!" "Exactamente!" "Claro!" "Sí!" "Eso es correcto!" ]
 concept:(incorrecto) ^rand["Vaya, es incorrecto!" "Otra vez será" "Vaya, parece que te has equivocado" "Parece ser que no es así" "Oh, no..." "La próxima vez será" "Lo siento, pero no..." ]
 
 proposal: %INTRO
-# Aquí poner la presentación del juego
+Buenos días, si quieres comprobar tu conocimiento sobre el castellano, las matemáticas o las ciencias sociales, este es tu juego! ^goto(SELECCION)
 
 # preguntar el tema del examen
-u: (vamos a jugar) %SELECCION
-Cuál quieres que sea el tema del examen? Matemáticas, Sociales o Castellano?
+u: (vamos a jugar) %SELECCION Cuál quieres que sea el tema del examen? Matemáticas, Sociales o Castellano?
     u1:(castellano)
     De acuerdo, empecemos el examen de Castellano! %CASTELLANO
     u1:(matematicas)
@@ -118,7 +117,7 @@ En qué planeta del sistema solar a parte de la Tierra se encuentra el Monte Oli
 
 proposal:%SOCIALES5
 En qué año llegaron los humanos a la Luna?
-    u1:(1969)
+    u1:({"en {el}"} 1969)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
