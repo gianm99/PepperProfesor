@@ -1,7 +1,5 @@
 topic: ~castellano()
 # Defining extra concepts out of words or group of words
-concept:(Área) [B "La B" "Respuesta B" "La respuesta B" "La instrusa es área" "Área es la palabra intrusa"]
-
 dynamic: wrongNumbers
 u:(Quién eres?)
 Soy Pepper, tu profesor!

@@ -1,0 +1,19 @@
+topic: ~prueba()
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+u: (quién eres?)
+    Soy el robot Pepper
+
+proposal: %PREGUNTA_CABALLO
+Vale, de qué color es el caballo blanco de Santiago?
+    u1: (blanco)
+        correcto!
+    u1: (*)
+        incorrecto!
+proposal: %PREGUNTA_CABALLO_COLOR
+De qué color es el caballo $color de Santiago?
+    u1: ($color)
+    Exactamente!
+    u1: (*)
+    No, incorrecto.

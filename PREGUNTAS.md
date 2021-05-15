@@ -1,9 +1,9 @@
 # PREGUNTAS
 
 ## Secciones
--   Matemáticas
--   Castellano
--   Sociales
+-   Matemáticas (@tomasbordoy)
+-   Castellano (@ireneverab)
+-   Sociales (@gianm99)
 
 ## Restricciones
 -   Cada sección tiene 40 preguntas
