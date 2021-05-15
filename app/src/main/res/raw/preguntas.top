@@ -19,73 +19,283 @@ u: (vamos a jugar) %SELECCION Cuál quieres que sea el tema del examen? Matemát
 
 proposal: %CASTELLANO1
 Cuál es la palabra intrusa en esta familia? A Arena B Área C Arenal
-    u1:($r1)
-    $show="Correcto!" Muy bien, sigue así! %CORRECTO
+    u1:(["Área"])
+    $show="Correcto" ~correcto %CORRECTO
     u1:(*)
-    $show="Incorrecto!" Vaya, es incorrecto! %INCORRECTO
+    $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %CASTELLANO2
 En la oración La vieja fábrica qué función realiza la? A Determinante B Núcleo C Complemento
-    u1:($r2)
-    $show="Correcto!" Eso es, a tope! %CORRECTO
+    u1:(Determinante)
+    $show="Correcto" ~correcto %CORRECTO
     u1:(*)
-    $show="Incorrecto!" Otra vez será %INCORRECTO
+    $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %CASTELLANO3
 Cuál es el pretérito imperfecto del verbo haber? A Dijera o dijese B Dije C Dijere
-    u1:($r3)
-    $show="Correcto!" Exacto! %CORRECTO
+    u1:(Dijera o dijese)
+    $show="Correcto" ~correcto %CORRECTO
     u1:(*)
-    $show="Incorrecto!" Vaya, parece que te has equivocado %INCORRECTO
+    $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %CASTELLANO4
-Cuándo llevan tilde las palabras agudas? A Siempre. B Si terminan en consonante n,s. C Si terminan en consonante diferente a n o s.
-    u1:($r4)
-    $show="Correcto" Bingo! %CORRECTO
-    u1:(*):
-    $show="Incorrecto!" Parece ser que no es así %INCORRECTO
+Cuándo llevan tilde las palabras agudas? A Siempre. B Si terminan en vocal o consonante n,s. C Si terminan en consonante diferente a n o s.
+    u1:(Si terminan en vocal o consonante n,s)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %CASTELLANO5
-Cuál de estas palabras lleva tilde? A Cartera B Párpado C Tenedor
-    u1:($r5)
-    $show="Correcto" Muy bien! %CORRECTO
-    u1:(*):
-    $show="Incorrecto!" Otra vez será %INCORRECTO
+Cuál de estas palabras lleva tilde? A Cartera B Parpado C Tenedor
+    u1:(Párpado)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %CASTELLANO6
-Cuál es el femenino de la palabra alcaldesa?
+Cuál es el femenino de la palabra alcalde?
     u1:(Alcaldesa)
-    $show="Correcto" Exactamente! %CORRECTO
-    u1:(*):
-    $show="Incorrecto!" Oh, no... %INCORRECTO
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
 
-proposal: %CASTELLANO7
-Cuál de estas palabras lleva tilde? A Cartera B Párpado C Tenedor
-    u1:($r7)
-    $show="Correcto" Muy bien! %CORRECTO
-    u1:(*):
-    $show="Incorrecto!" Otra vez será %INCORRECTO
+proposal: %CASTELLANO7 #Imagen de violín
+Cómo se llama la persona que toca este instrumento?
+    u1:(Violinista)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %CASTELLANO8
 Cuál de estos sustantivos es propio? A Rebaño B Árbol C Andrés
-    u1:($r8)
-    $show="Correcto" Claro! %CORRECTO
-    u1:(*):
-    $show="Incorrecto!" La próxima vez será %INCORRECTO
+    u1:(Andrés)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
 
-proposal: %CASTELLANO9
-Cuál de estos sustantivos es propio? A Rebaño B Árbol C Andrés
-    u1:($r8)
-    $show="Correcto" Claro! %CORRECTO
-    u1:(*):
-    $show="Incorrecto!" La próxima vez será %INCORRECTO
+proposal: %CASTELLANO9 #Miguel de Cervantes
+Quién es? A Miguel de Cervantes B Federico García Lorca C Lope de Vega
+    u1:(Miguel de Cervantes)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %CASTELLANO10
-Qué palabra lleva hache? A Invierno B Horario
-    u1:($r8)
-    $show="Correcto" Sí! %CORRECTO
-    u1:(*):
-    $show="Incorrecto!" Lo siento, pero no... %INCORRECTO
+Qué palabra lleva hache? A Invierno B Orario
+    u1:(Horario)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO11
+Por qué el enunciado Rebajas de invierno no es una oración? A No tiene sujeto. B No consta de sujeto y predicado y no posee un verbo en forma personal.
+    u1:(No consta de sujeto y predicado y no posee un verbo en forma personal)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO12
+Cuál de estos grupos son sinónimos entre ellos? A Limpiar lavar asear B andar caminar contemplar
+    u1:(Limpiar lavar asear)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO13
+Cuál es el antónimo de coser?
+    u1:(Descoser)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO14
+Cuál empieza por Y? A Yugular B Lluvia
+    u1:(Yugular)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO15 #Foto de jersey
+Qué letra le falta a jerse...?
+    u1:(Y)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO16
+Cuál es el prefijo de superdotado?
+    u1:(Super)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO17
+Cuál es el prefijo de antigripal?
+    u1:(Anti)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO18 #Imagen de rallador
+Completa la oración Este utensilio sirve para ... el pan. A Rallar B Rayar
+    u1:(Rallar)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO19
+Cuál es la palabra correcta? Los jueces ... al acusado porque era inocente. A Absolvieron B Absorbieron
+    u1:(Absolvieron)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO20
+Cuál de estas afirmaciones es falsa? A Las palabras monosílabas jamás se acentúan. B Más lleva tilde cuando significa cantidad.
+    u1:(Las palabras monosílabas jamás se acentúan)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO21
+La palabra UNICEF es A Una abreviatura B Siglas
+    u1:(Siglas)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO22
+La palabra Dña es A Una abreviatura B Siglas
+    u1:(Una abreviatura)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO23
+Cuál es la palabra castellana correspondiente al extranjerismo confort? A Comodidad B Encanto
+    u1:(Comodidad)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO24
+Cuál es la palabra castellana correspondiente al extranjerismo grill? A Hamburguesa B Parrilla
+    u1:(Parrilla)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO25
+Las preposiciones son A Enlaces que unen dos palabras o grupos de palabras que corresponden a ideas semejantes B Enlaces que unen dos palabras de modo que la segunda complementa a la primera
+    u1:(Enlaces que unen dos palabras de modo que la segunda complementa a la primera)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO26
+Las conjunciones son A Enlaces que unen dos palabras o grupos de palabras que corresponden a ideas semejantes B Enlaces que unen dos palabras de modo que la segunda complementa a la primera
+    u1:(Enlaces que unen dos palabras o grupos de palabras que corresponden a ideas semejantes)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO27
+El eufemismo de muerte es A Sustracción B Defunción
+    u1:(Defunción)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO28
+Completa la palabra a...edrez A j B g
+    u1:(J)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO29
+Completa la palabra e...emplo A j B g
+    u1:(J)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO30
+Completa la palabra ...eranio A j B g
+    u1:(G)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO31
+Completa la palabra e...pléndido A x B s
+    u1:(S)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO32
+Completa la palabra e...plícito A x B s
+    u1:(X)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO33
+Completa la palabra e...quema A x B s
+    u1:(S)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO34
+Cuáles son las siglas del Documento Nacional de Identidad?
+    u1:(DNI)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO35
+La oración Martín es una joya tiene A Sentido literal B Sentido figurado
+    u1:(Sentido figurado)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO36
+La oración Eva es una lapa, no te la quitas de encima tiene A Sentido literal B Sentido figurado
+    u1:(Sentido figurado)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO37
+La oración Entro en el gallinero a recoger los huevos tiene A Sentido literal B Sentido figurado
+    u1:(Sentido literal)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO38
+En Alicia escribió un cuento precioso. Un cuento precioso es A Complemento indirecto CI B Complemento directo CD
+    u1:(Complemento directo)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO39
+En Vino ayer su primo Juan. Ayer es A Complemento circunstancial de modo B Complemento circunstancial de tiempo
+    u1:(Complemento circunstancial de tiempo)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %CASTELLANO40
+Algo que no es legal es A Contrailegal B Ilegal C Antilegal
+    u1:(Ilegal)
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %SOCIALES1
 Alrededor de qué tipo de astro orbitan los satélites?
@@ -437,7 +647,7 @@ Cuál fue el conflicto bélico más importante del siglo XX?
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
-proposal: %RESULTADOS
+proposal: %RESULTADOS #poner sonidos si se puede
 ^first["$puntos<5 Ha ido mal el examen, has suspendido" "$puntos<7 Estás aprobado" "$puntos<9 Eso es un notable" "Eso es excelente!"] ^goto(FINAL)
 
 proposal: %FINAL
