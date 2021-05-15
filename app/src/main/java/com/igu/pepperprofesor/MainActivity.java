@@ -22,7 +22,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     Subject subject;
     QiChatbot qiChatbot;
     Chat chat;
-    public static final int N_QUESTIONS = 10;
+    public static final int N_QUESTIONS = 3;
     private int[] questionNumbers;
     private int puntuacion;
     private int current;
@@ -74,15 +74,28 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
                     goToSelection();
                     break;
                 case "CORRECTO":
-                    puntuacion++;
+                    aumentarPuntuacion();
                     nextQuestion();
                     break;
                 case "INCORRECTO":
                     nextQuestion();
                     break;
+                case "OTRO_EXAMEN":
+                    resetScore();
+                    goToSelection();
+                    break;
             }
         });
         chat.addOnStartedListener(this::goToIntroduction);
+    }
+
+    private void resetScore() {
+        puntuacion = 0;
+        current = 0;
+    }
+
+    private void aumentarPuntuacion() {
+        puntuacion++;
     }
 
     private void goToIntroduction() {
@@ -96,12 +109,13 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     }
 
     private void nextQuestion() {
-        if (current == N_QUESTIONS) {
+        if (current < N_QUESTIONS) {
+            goToQuestion(questionNumbers[current]);
+            current++;
+        } else {
+            qiChatbot.variable("puntos").setValue(Integer.toString(puntuacion));
             goToResults();
-            return;
         }
-        goToQuestion(questionNumbers[current]);
-        current++;
     }
 
     @Override

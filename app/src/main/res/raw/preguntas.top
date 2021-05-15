@@ -467,7 +467,7 @@ Cuál es la capital de Reino Unido?
 
 proposal:%SOCIALES25
 Cuál es la capital de Estados Unidos?
-    u1:(washington *)
+    u1:(washington*)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
@@ -579,7 +579,7 @@ Cómo llamaron los romanos a la península Ibérica?
 
 proposal:%SOCIALES41
 Qué idioma hablaban los romanos?
-    u1:(latín *)
+    u1:(latín)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
@@ -648,3 +648,9 @@ Cuál fue el conflicto bélico más importante del siglo XX?
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %RESULTADOS #poner sonidos si se puede
+^first["$puntos<5 Ha ido mal el examen, has suspendido" "$puntos<7 Estás aprobado" "$puntos<9 Eso es un notable" "Eso es excelente!"] ^goto(FINAL)
+
+proposal: %FINAL
+Genial, ya has terminado el examen! Quieres hacer otro examen o terminar aquí?
+    u1:(otro {examen}) %OTRO_EXAMEN # ^resetOnFocus no disponible en API 4 (?)
+    u1:(*) Hasta la próxima! Que tengas un buen día! ^releaseFocus
