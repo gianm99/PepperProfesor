@@ -652,5 +652,5 @@ proposal: %RESULTADOS #poner sonidos si se puede
 
 proposal: %FINAL
 Genial, ya has terminado el examen! Quieres hacer otro examen o terminar aquí?
-    u1:(otro examen) %OTRO_EXAMEN # ^resetOnFocus no disponible en API 4 (?)
+    u1:(otro {examen}) %OTRO_EXAMEN # ^resetOnFocus no disponible en API 4 (?)
     u1:(*) Hasta la próxima! Que tengas un buen día! ^releaseFocus
