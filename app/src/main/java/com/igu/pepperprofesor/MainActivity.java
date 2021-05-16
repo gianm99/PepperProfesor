@@ -15,15 +15,17 @@ import com.aldebaran.qi.sdk.object.conversation.AutonomousReactionValidity;
 import com.aldebaran.qi.sdk.object.conversation.Chat;
 import com.aldebaran.qi.sdk.object.conversation.QiChatbot;
 import com.aldebaran.qi.sdk.object.conversation.Topic;
+import com.aldebaran.qi.sdk.object.conversation.TopicStatus;
 
 public class MainActivity extends RobotActivity implements RobotLifecycleCallbacks {
     public static final String TAG = "MainActivityProfesor";
-    Topic topic;
+    Topic topicPreguntas;
+    TopicStatus topicStatusPreguntas;
     Subject subject;
     QiChatbot qiChatbot;
     Chat chat;
     public static final int N_QUESTIONS = 10;
-    private int[] questionNumbers;
+    private int[] questions;
     private int puntuacion;
     private int current;
 
@@ -53,8 +55,9 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     }
 
     private void initChatbot(QiContext qiContext) {
-        topic = TopicBuilder.with(qiContext).withResource(R.raw.preguntas).build();
-        qiChatbot = QiChatbotBuilder.with(qiContext).withTopic(topic).build();
+        topicPreguntas = TopicBuilder.with(qiContext).withResource(R.raw.preguntas).build();
+        qiChatbot = QiChatbotBuilder.with(qiContext).withTopic(topicPreguntas).build();
+        topicStatusPreguntas = qiChatbot.topicStatus(topicPreguntas);
         chat = ChatBuilder.with(qiContext).withChatbot(qiChatbot).build();
     }
 
@@ -74,15 +77,29 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
                     goToSelection();
                     break;
                 case "CORRECTO":
-                    puntuacion++;
+                    aumentarPuntuacion();
                     nextQuestion();
                     break;
                 case "INCORRECTO":
                     nextQuestion();
                     break;
+                case "OTRO_EXAMEN":
+                    resetScore();
+                    goToSelection();
+                    break;
             }
         });
         chat.addOnStartedListener(this::goToIntroduction);
+        topicStatusPreguntas.addOnFocusedChangedListener(focused -> Log.i(TAG, "addOnFocusedChanged: " + focused));
+    }
+
+    private void resetScore() {
+        puntuacion = 0;
+        current = 0;
+    }
+
+    private void aumentarPuntuacion() {
+        puntuacion++;
     }
 
     private void goToIntroduction() {
@@ -91,23 +108,23 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
 
     private void startSubject(Subject subject) {
         this.subject = subject;
-        questionNumbers = Utilities.randomQuestions(subject.getSize(), N_QUESTIONS);
+        questions = Utilities.randomQuestions(subject.getSize(), N_QUESTIONS);
         nextQuestion();
     }
 
     private void nextQuestion() {
-        if (current == N_QUESTIONS) {
+        if (current < N_QUESTIONS) {
+            goToQuestion(questions[current]);
+            current++;
+        } else {
+            qiChatbot.variable("puntos").setValue(Integer.toString(puntuacion));
             goToResults();
-            return;
         }
-        goToQuestion(questionNumbers[current]);
-        current++;
     }
 
     @Override
     public void onRobotFocusLost() {
         Log.i(TAG, "Focus perdido");
-        //TODO Poner que diga algún mensaje gracioso
     }
 
     @Override
@@ -129,7 +146,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
 
     private void goToBookmark(String bookmarkName) {
         qiChatbot.goToBookmark(
-                topic.getBookmarks().get(bookmarkName),
+                topicPreguntas.getBookmarks().get(bookmarkName),
                 AutonomousReactionImportance.HIGH,
                 AutonomousReactionValidity.IMMEDIATE
         );
