@@ -1,8 +1,10 @@
 topic: ~preguntas ^resetOnFocus ()
 
+concept:(adios) ^rand["Hasta la próxima!" "Hasta luego!"]
 concept:(correcto) ^rand["Muy bien, sigue así!" "Eso es, a tope!" "Exacto!" "Bingo!" "Muy bien!" "Exactamente!" "Claro!" "Sí!" "Eso es correcto!" ]
 concept:(incorrecto) ^rand["Vaya, es incorrecto!" "Otra vez será" "Vaya, parece que te has equivocado" "Parece ser que no es así" "Oh, no..." "La próxima vez será" "Lo siento, pero no..." ]
 
+# hacer una introducción del juego
 proposal: %INTRO
 Buenos días, si quieres comprobar tu conocimiento sobre el castellano, las matemáticas o las ciencias sociales, este es tu juego! ^goto(SELECCION)
 
@@ -564,7 +566,7 @@ Cómo se llaman los pueblos que no permanecían en sitios fijos y se trasladaban
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES39
-Cómo se llaman los pueblos que que dejaron de ir de un sitio a otro y se quedaron fijos en un sitio?
+Cómo se llaman los pueblos que dejaron de ir de un sitio a otro y se quedaron fijos en un sitio?
     u1:(sedentarios)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
@@ -651,6 +653,6 @@ proposal: %RESULTADOS #poner sonidos si se puede
 ^first["$puntos<5 Ha ido mal el examen, has suspendido" "$puntos<7 Estás aprobado" "$puntos<9 Eso es un notable" "Eso es excelente!"] ^enableThenGoto(FINAL)
 
 proposal: %FINAL
-Genial, ya has terminado el examen! Quieres hacer otro examen o terminar aquí?
+Ya has terminado el examen, quieres hacer otro o prefieres dejarlo por hoy?
     u1:(otro {examen}) %OTRO_EXAMEN ^enable(RESULTADOS)
     u1:(*) Hasta la próxima! Que tengas un buen día! ^releaseFocus
