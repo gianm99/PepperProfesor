@@ -1,6 +1,6 @@
 topic: ~preguntas ^resetOnFocus ()
 
-concept:(adios) ^rand["Hasta la próxima!" "Hasta luego!"]
+concept:(adios) ^rand["Hasta la próxima!" "Hasta luego!" "Hasta la próxima vez!" "Nos vemos!" "Adiós, que tengas un buen día!"]
 concept:(correcto) ^rand["Muy bien, sigue así!" "Eso es, a tope!" "Exacto!" "Bingo!" "Muy bien!" "Exactamente!" "Claro!" "Sí!" "Eso es correcto!" ]
 concept:(incorrecto) ^rand["Vaya, es incorrecto!" "Otra vez será" "Vaya, parece que te has equivocado" "Parece ser que no es así" "Oh, no..." "La próxima vez será" "Lo siento, pero no..." ]
 
@@ -27,7 +27,7 @@ Cuál es la palabra intrusa en esta familia? A Arena B Área C Arenal
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %CASTELLANO2
-En la oración La vieja fábrica qué función realiza la? A Determinante B Núcleo C Complemento
+En la oración La vieja fábrica qué función realiza la palabra la? A Determinante B Núcleo C Complemento
     u1:(Determinante)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
@@ -300,15 +300,15 @@ Algo que no es legal es A Contrailegal B Ilegal C Antilegal
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %SOCIALES1
-Alrededor de qué tipo de astro orbitan los satélites?
-    u1:([planeta planetas])
+Alrededor de qué tipo de astro orbitan los satélites? A, planetas. B, estrellas. C, agujeros negros.
+    u1:([A planetas])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES2
-Qué forma tiene la galaxia en la que se encuentra la Tierra?
-    u1:({en} espiral)
+Qué forma tiene la galaxia en la que se encuentra la Tierra? A, quásar. B, elíptica. C, espiral.
+    u1:([C espiral])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
@@ -322,14 +322,14 @@ El sol es una estrella de tamaño enano, mediano o gigante?
 
 proposal:%SOCIALES4
 En qué planeta del sistema solar a parte de la Tierra se encuentra el Monte Olimpo?
-    u1:({en} marte)
+    u1:(marte)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES5
-En qué año llegaron los humanos a la Luna?
-    u1:({"en {el}"} 1969)
+En qué año llegaron los humanos a la Luna? A, 1973. B, 1969. C, 1968.
+    u1:([B 1969])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
@@ -349,71 +349,71 @@ Cómo se llaman las circunferencias imaginarias que pasan por los Polos Norte y 
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES8
-Entre qué países están los Pirineos?
-    u1:(["españa y francia" "francia y españa"])
+Entre qué países están los Pirineos? A, España y Francia. B, Portugal y España. C, Italia y Francia.
+    u1:([A "España y Francia"])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES9
-Cuál es el río más largo de España?
-    u1:({río} tajo)
+Cuál es el río más largo de España? A, Duero. B, Guadalquivir. C, Tajo.
+    u1:([C Tajo])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES10
-Cuál es la montaña más alta de España?
-    u1:({el} teide)
+Cuál es la montaña más alta de España? A, Mulhacén. B, Teide. C, Aneto.
+    u1:([B Teide])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES11
-Con qué océano está en contacto España?
-    u1:({océano} atlántico)
+Con qué océano está en contacto España? A, Atlántico. B, Pacífico. C, Índico.
+    u1:([A Atlántico])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES12
 A qué continente pertenece Australia?
-    u1:(oceanía)
+    u1:(Oceanía)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES13
 A qué continente pertenece Tailandia?
-    u1:(asia)
+    u1:(Asia)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES14
 A qué continente pertenece Kenia?
-    u1:(áfrica)
+    u1:(África)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES15
 A qué continente pertenece Suecia?
-    u1:(europa)
+    u1:(Europa)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES16
 A qué continente pertenece Guatemala?
-    u1:(américa)
+    u1:(América)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES17
 Cuál es el continente más grande del mundo?
-    u1:(asia)
+    u1:(Asia)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
@@ -433,50 +433,50 @@ En qué unidades se miden la latitud y la longitud de un punto?
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES20
-Cuál es la región más meridional de España?
-    u1:({islas} canarias)
+Cuál es la región española más al sur?
+    u1:({{las }islas }canarias)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES21
 Cuál es la capital de España?
-    u1:(madrid)
+    u1:(Madrid)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES22
 Cuál es la capital de Francia?
-    u1:(parís)
+    u1:(París)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES23
 Cuál es la capital de Alemania?
-    u1:(berlín)
+    u1:(Berlín)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES24
 Cuál es la capital de Reino Unido?
-    u1:(londres)
+    u1:(Londres)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES25
-Cuál es la capital de Estados Unidos?
-    u1:(washington*)
+Cuál es la capital de Australia?
+    u1:(Canberra)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES26
 Cuál es la capital de Noruega?
-    u1:(oslo)
+    u1:(Oslo)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
@@ -504,14 +504,14 @@ Cuántas ciudades autónomas hay en España?
 
 proposal:%SOCIALES30
 Cuál es la comunidad autónoma más grande de España?
-    u1:(castilla y león)
+    u1:(Castilla y león)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES31
 Cuál es la comunidad autónoma más poblada de España?
-    u1:(andalucía)
+    u1:(Andalucía)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
@@ -524,127 +524,127 @@ Cuáles son los tres tipos de poder político que hay en España? Legislativo, j
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES33
-Qué modelo de gobierno tiene España?
-    u1:(monarquía parlamentaria)
+Qué modelo de gobierno tiene España? A, Monarquía absoluta. B, República. C, Monarquía parlamentaria.
+    u1:([C "Monarquía parlamentaria"])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES34
 Qué lengua oficial hay en las Illes Balears aparte del castellano?
-    u1:(catalán)
+    u1:(Catalán)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES35
 Qué lengua oficial hay en el País Vasco aparte del castellano?
-    u1:(vasco)
+    u1:(Vasco)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES36
-Qué sector económico es el predominante en la economía de España?
-    u1:({sector} [terciario servicios])
+Qué sector económico es el predominante en la economía de España? A, primario. B, secundario. C, terciario.
+    u1:([C terciario])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES37
-En cuántas etapas se divide la historia según los expertos?
-    u1:(5)
+En cuántas etapas se divide la historia según los expertos? A, 3. B, 5. C, 7.
+    u1:([B 5])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES38
 Cómo se llaman los pueblos que no permanecían en sitios fijos y se trasladaban en busca de alimentos?
-    u1:(nómadas)
+    u1:(Nómadas)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES39
 Cómo se llaman los pueblos que dejaron de ir de un sitio a otro y se quedaron fijos en un sitio?
-    u1:(sedentarios)
+    u1:(Sedentarios)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES40
 Cómo llamaron los romanos a la península Ibérica?
-    u1:(hispania)
+    u1:(Hispania)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES41
 Qué idioma hablaban los romanos?
-    u1:(latín)
+    u1:(Latín)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES42
-En qué siglo se deshizo el Imperio romano?
-    u1:([v quinto 5])
+En qué siglo se deshizo el Imperio romano? A, 5 después de cristo. B, 1 antes de cristo. C, 4 después de cristo.
+    u1:([A 5])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES43
 Qué etapa histórica comienza con la aparición de la escritura?
-    u1:(edad antigua)
+    u1:({edad} antigua)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES44
 Qué etapa histórica comienza con la caída del imperio romano?
-    u1:(edad media)
+    u1:({edad} [media medieval])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES45
 Qué etapa histórica comienza tras el descubrimiento de América?
-    u1:(edad moderna)
+    u1:({edad} moderna)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES46
 Qué etapa histórica comienza tras la Revolución Francesa?
-    u1:(edad contemporánea)
+    u1:({edad} contemporánea)
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES47
-A quién se le atribuye la invención de la imprenta?
-    u1:({johannes} guttenberg)
+A quién se le atribuye la invención de la imprenta? A, Leonardo Da Vinci. B, Johannes Guttenberg. C, Thomas Edison.
+    u1:([B "Johannes Gutenberg"])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES48
-Cuál fue el invento que resultó esencial para el desarrollo de la Revolución Industrial?
-    u1:({la} máquina de vapor)
+Cuál fue el invento que resultó esencial para el desarrollo de la Revolución Industrial? A, Coche. B, Rueda. C, Máquina de vapor.
+    u1:([C "Máquina de vapor"])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES49
-A qué inventor se le atribuye la invención del teléfono?
-    u1:({alexander} graham bell)
+A qué inventor se le atribuye la invención del teléfono? A, Thomas Edison. B, Alexander Graham Bell. C, Nikola Tesla.
+    u1:([B "Alexander Graham Bell"])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES50
-Cuál fue el conflicto bélico más importante del siglo XX?
-    u1:(segunda guerra mundial)
+Cuál fue el conflicto bélico más importante del siglo XX? A, Primera Guerra Mundial. B, Guerra de Corea. C, Segunda guerra mundial.
+    u1:([C "Segunda guerra mundial"])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
