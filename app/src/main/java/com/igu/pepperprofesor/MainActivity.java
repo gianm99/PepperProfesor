@@ -108,7 +108,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
 
     private void startSubject(Subject subject) {
         this.subject = subject;
-        questions = Utilities.randomQuestions(subject.getSize(), N_QUESTIONS);
+        questions = Utilities.randomNumbers(1, subject.getSize(), N_QUESTIONS);
         nextQuestion();
     }
 

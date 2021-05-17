@@ -314,8 +314,8 @@ Qué forma tiene la galaxia en la que se encuentra la Tierra? A, quásar. B, el�
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES3
-El sol es una estrella de tamaño enano, mediano o gigante?
-    u1:(enano)
+Qué tipo de estrella es el Sol? A, enana. B, mediana. C, grande.
+    u1:([A enana])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
@@ -349,7 +349,7 @@ Cómo se llaman las circunferencias imaginarias que pasan por los Polos Norte y 
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES8
-Entre qué países están los Pirineos? A, España y Francia. B, Portugal y España. C, Italia y Francia.
+Entre qué paises están los Pirineos? A, España y Francia. B, Portugal y España. C, Italia y Francia.
     u1:([A "España y Francia"])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
@@ -588,7 +588,7 @@ Qué idioma hablaban los romanos?
 
 proposal:%SOCIALES42
 En qué siglo se deshizo el Imperio romano? A, 5 después de cristo. B, 1 antes de cristo. C, 4 después de cristo.
-    u1:([A 5])
+    u1:([A])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
@@ -622,7 +622,7 @@ Qué etapa histórica comienza tras la Revolución Francesa?
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES47
-A quién se le atribuye la invención de la imprenta? A, Leonardo Da Vinci. B, Johannes Guttenberg. C, Thomas Edison.
+A quién se le atribuye la invención de la imprenta? A, Leonardo da Vinci. B, Johannes Guttenberg. C, Thomas Edison.
     u1:([B "Johannes Gutenberg"])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
@@ -643,14 +643,14 @@ A qué inventor se le atribuye la invención del teléfono? A, Thomas Edison. B,
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal:%SOCIALES50
-Cuál fue el conflicto bélico más importante del siglo XX? A, Primera Guerra Mundial. B, Guerra de Corea. C, Segunda guerra mundial.
+Cuál fue el conflicto bélico más importante del siglo XX? A, Primera Guerra Mundial. B, Guerra de Corea. C, Segunda Guerra Mundial.
     u1:([C "Segunda guerra mundial"])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %RESULTADOS #poner sonidos si se puede
-^first["$puntos<5 Ha ido mal el examen, has suspendido" "$puntos<7 Estás aprobado" "$puntos<9 Eso es un notable" "Eso es excelente!"] ^enableThenGoto(FINAL)
+^first["$puntos<5 Ha ido mal el examen, has suspendido" "$puntos<7 Estás aprobado" "$puntos<9 Eso es un notable" "Eso es un excelente!"] ^enableThenGoto(FINAL)
 
 proposal: %FINAL
 Ya has terminado el examen, quieres hacer otro o prefieres dejarlo por hoy?

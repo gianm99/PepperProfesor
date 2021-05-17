@@ -1,9 +1,34 @@
 package com.igu.pepperprofesor;
 
+import androidx.annotation.NonNull;
+
+import org.jetbrains.annotations.NotNull;
+
 public enum Subject {
-    CASTELLANO(40),
-    MATEMATICAS(40),
-    SOCIALES(50);
+    CASTELLANO(40){
+        @NonNull
+        @NotNull
+        @Override
+        public String toString() {
+            return "CASTELLANO";
+        }
+    },
+    MATEMATICAS(40){
+        @NonNull
+        @NotNull
+        @Override
+        public String toString() {
+            return "MATEMATICAS";
+        }
+    },
+    SOCIALES(50){
+        @NonNull
+        @NotNull
+        @Override
+        public String toString() {
+            return "SOCIALES";
+        }
+    };
 
     private final int size;
 
@@ -12,6 +37,14 @@ public enum Subject {
     }
 
     public int getSize() {
+        return size;
+    }
+
+    public static int getCombinedSize() {
+        int size = 0;
+        for (Subject s : Subject.values()) {
+            size += s.size;
+        }
         return size;
     }
 }
