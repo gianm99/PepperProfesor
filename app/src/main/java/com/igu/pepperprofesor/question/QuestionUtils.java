@@ -5,6 +5,7 @@ import android.os.Build;
 import androidx.annotation.RequiresApi;
 
 import com.igu.pepperprofesor.MainActivity;
+import com.igu.pepperprofesor.R;
 import com.igu.pepperprofesor.Subject;
 import com.igu.pepperprofesor.Utilities;
 
@@ -117,7 +118,7 @@ public class QuestionUtils {
                 new OptionQuestion(SOCIALES, 50, "¿Cuál fue el conflicto bélico más importante del siglo XX?",
                         Arrays.asList(new Option('a', "Primera Guerra Mundial"),
                                 new Option('b', "Guerra de Corea"),
-                                new Option('c', "Segunda Guerra Mundial")))
+                                new Option('c', "Segunda Guerra Mundial"))),
                 new OptionQuestion(CASTELLANO, 1, "¿Cuál es la palabra intrusa en esta familia?",
                         Arrays.asList(new Option('a', "Arena"),
                                 new Option('b', "Área"),
@@ -139,12 +140,12 @@ public class QuestionUtils {
                                 new Option('b', "Parpado"),
                                 new Option('c', "Tenedor"))),
                 new Question(CASTELLANO, 6, "¿Cuál es el femenino de la palabra alcalde?"),
-                new ImageQuestion(CASTELLANO, 7, "¿Cómo se llama la persona que toca este instrumento?",R.drawable.violin),
+                new ImageQuestion(CASTELLANO, 7, "¿Cómo se llama la persona que toca este instrumento?", R.drawable.violin),
                 new OptionQuestion(CASTELLANO, 8, "¿Cuál de estos sustantivos es propio?",
                         Arrays.asList(new Option('a', "Rebaño"),
                                 new Option('b', "Árbol"),
                                 new Option('c', "Andrés"))),
-                new ImageQuestion(CASTELLANO, 9, "¿Quién es?",R.drawable.cervantes),
+                new ImageQuestion(CASTELLANO, 9, "¿Quién es?", R.drawable.cervantes),
                 new OptionQuestion(CASTELLANO, 10, "¿Qué palabra lleva hache?",
                         Arrays.asList(new Option('a', "Invierno"),
                                 new Option('b', "Orario"))),
@@ -228,7 +229,7 @@ public class QuestionUtils {
                 new OptionQuestion(CASTELLANO, 40, "Algo que no es legal es",
                         Arrays.asList(new Option('a', "Contralegal"),
                                 new Option('b', "Ilegal"),
-                                new Option('c',"Antilegal")))
+                                new Option('c', "Antilegal")))
         );
     }
 
