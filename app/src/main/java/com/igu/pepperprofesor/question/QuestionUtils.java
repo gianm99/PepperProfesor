@@ -155,9 +155,16 @@ public class QuestionUtils {
         return questions;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
+    /**
+     * Devuelve la pregunta con el id y de la temática indicada
+     *
+     * @param id      identificador de la pregunta a buscar
+     * @param subject temática de la pregunta a buscar
+     * @return pregunta con el id y de la temática indicada o null si no existe
+     */
     public static Question getQuestionBy(int id, Subject subject) {
-        return questions.stream().filter(question -> subject.equals(question.getSubject()) &&
-                id == question.getId()).findFirst().orElse(null);
+        for (Question question : questions)
+            if (question.getId() == id && question.getSubject().equals(subject)) return question;
+        return null;
     }
 }
