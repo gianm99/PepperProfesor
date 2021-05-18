@@ -27,7 +27,7 @@ Cuál es la palabra intrusa en esta familia? A, Arena. B, Área. C, Arenal.
     $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %CASTELLANO2
-En la oración La vieja fábrica qué función realiza la palabra la? A, Determinante. B, Núcleo. C, Complemento.
+En la oración La vieja fábrica qué función realiza la? A, Determinante. B, Núcleo. C, Complemento.
     u1:([A Determinante])
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
