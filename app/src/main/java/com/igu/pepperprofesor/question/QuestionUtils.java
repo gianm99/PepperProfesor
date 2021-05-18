@@ -127,7 +127,6 @@ public class QuestionUtils {
      * @param subject temática de las preguntas
      * @return lista de preguntas con el tamaño indicado y sobre la temática indicada
      */
-    @RequiresApi(api = Build.VERSION_CODES.N)
     public static List<Question> randomQuestions(int limit, Subject subject) {
         if (limit >= subject.getSize()) throw new IllegalArgumentException();
         int[] randomNumbers = Utilities.randomNumbers(1, subject.getSize(), MainActivity.N_QUESTIONS);

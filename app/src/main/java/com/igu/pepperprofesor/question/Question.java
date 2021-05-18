@@ -18,7 +18,7 @@ public class Question {
     }
 
     public String getBookmark() {
-        return String.format(Locale.ENGLISH, "%%%s%d", subject, id);
+        return subject.name() + id;
     }
 
     public QuestionType getQuestionType() {
