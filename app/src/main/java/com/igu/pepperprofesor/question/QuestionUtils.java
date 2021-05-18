@@ -128,7 +128,7 @@ public class QuestionUtils {
      * @return lista de preguntas con el tamaño indicado y sobre la temática indicada
      */
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public List<Question> randomQuestions(int limit, Subject subject) {
+    public static List<Question> randomQuestions(int limit, Subject subject) {
         if (limit >= subject.getSize()) throw new IllegalArgumentException();
         int[] randomNumbers = Utilities.randomNumbers(1, subject.getSize(), MainActivity.N_QUESTIONS);
         List<Question> questions = new ArrayList<>(limit);
@@ -145,7 +145,7 @@ public class QuestionUtils {
      * @param limit cantidad de preguntas
      * @return lista de preguntas con el tamaño indicado
      */
-    public List<Question> randomQuestions(int limit) {
+    public static List<Question> randomQuestions(int limit) {
         List<Question> questions = new ArrayList<>(limit);
         int[] randomNumbers = Utilities.randomNumbers(0, questions.size() - 1, MainActivity.N_QUESTIONS);
         for (int number : randomNumbers) {
