@@ -1,18 +1,24 @@
 package com.igu.pepperprofesor.question;
 
-import com.igu.pepperprofesor.R;
-import com.igu.pepperprofesor.Subject;
+import android.os.Build;
 
+import androidx.annotation.RequiresApi;
+
+import com.igu.pepperprofesor.MainActivity;
+import com.igu.pepperprofesor.Subject;
+import com.igu.pepperprofesor.Utilities;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import static com.igu.pepperprofesor.Subject.SOCIALES;
 
 public class QuestionUtils {
-    private static final Question[] questions;
+    private static final List<Question> questions;
 
     static {
-        questions = new Question[]{
+        questions = Arrays.asList(
                 new OptionQuestion(SOCIALES, 1, "¿Alrededor de qué tipo de astro orbitan los satélites?",
                         Arrays.asList(new Option('a', "Planetas"),
                                 new Option('b', "Estrellas"),
@@ -111,7 +117,7 @@ public class QuestionUtils {
                         Arrays.asList(new Option('a', "Primera Guerra Mundial"),
                                 new Option('b', "Guerra de Corea"),
                                 new Option('c', "Segunda Guerra Mundial")))
-        };
+        );
     }
 
     /**
@@ -121,10 +127,16 @@ public class QuestionUtils {
      * @param subject temática de las preguntas
      * @return lista de preguntas con el tamaño indicado y sobre la temática indicada
      */
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public List<Question> randomQuestions(int limit, Subject subject) {
-        //TODO
         if (limit >= subject.getSize()) throw new IllegalArgumentException();
-        return null;
+        int[] randomNumbers = Utilities.randomNumbers(1, subject.getSize(), MainActivity.N_QUESTIONS);
+        List<Question> questions = new ArrayList<>(limit);
+        for (int number : randomNumbers) {
+            Question question = getQuestionBy(number, subject);
+            if (question != null && questions.size() < limit) questions.add(question);
+        }
+        return questions;
     }
 
     /**
@@ -134,7 +146,18 @@ public class QuestionUtils {
      * @return lista de preguntas con el tamaño indicado
      */
     public List<Question> randomQuestions(int limit) {
-        //TODO
-        return null;
+        List<Question> questions = new ArrayList<>(limit);
+        int[] randomNumbers = Utilities.randomNumbers(0, questions.size() - 1, MainActivity.N_QUESTIONS);
+        for (int number : randomNumbers) {
+            Question question = QuestionUtils.questions.get(number);
+            if (question != null) questions.add(question);
+        }
+        return questions;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public static Question getQuestionBy(int id, Subject subject) {
+        return questions.stream().filter(question -> subject.equals(question.getSubject()) &&
+                id == question.getId()).findFirst().orElse(null);
     }
 }
