@@ -127,7 +127,13 @@ public class QuestionUtils {
         return null;
     }
 
-    public List<Question> randomQuestions() {
+    /**
+     * Devuelve una lista de preguntas con el tamaño indicado
+     *
+     * @param limit cantidad de preguntas
+     * @return lista de preguntas con el tamaño indicado
+     */
+    public List<Question> randomQuestions(int limit) {
         //TODO
         return null;
     }
