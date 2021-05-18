@@ -1,5 +1,7 @@
 package com.igu.pepperprofesor.question;
 
+import android.media.Image;
+
 import com.igu.pepperprofesor.R;
 import com.igu.pepperprofesor.Subject;
 
@@ -133,15 +135,12 @@ public class QuestionUtils {
                                 new Option('b', "Parpado"),
                                 new Option('c', "Tenedor"))),
                 new Question(CASTELLANO, 56, "Cuál es el femenino de la palabra alcalde?"),
-                new Question(CASTELLANO, 57, "Cómo se llama la persona que toca este instrumento?"),
+                new ImageQuestion(CASTELLANO, 57, "Cómo se llama la persona que toca este instrumento?",R.drawable.violin),
                 new OptionQuestion(CASTELLANO, 58, "Cuál de estos sustantivos es propio?",
                         Arrays.asList(new Option('a', "Rebaño"),
                                 new Option('b', "Árbol"),
                                 new Option('c', "Andrés"))),
-                new OptionQuestion(CASTELLANO, 59, "Quién es?",
-                        Arrays.asList(new Option('a', "Miguel de Cervantes"),
-                                new Option('b', "Federico García Lorca"),
-                                new Option('c', "Lope de Vega"))),
+                new ImageQuestion(CASTELLANO, 59, "Quién es?",R.drawable.cervantes),
                 new OptionQuestion(CASTELLANO, 60, "Qué palabra lleva hache?",
                         Arrays.asList(new Option('a', "Invierno"),
                                 new Option('b', "Orario"))),
