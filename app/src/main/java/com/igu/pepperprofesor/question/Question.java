@@ -27,4 +27,16 @@ public class Question {
     public String getBookmark() {
         return String.format("%%%s%d", subject, id);
     }
+
+    public Subject getSubject() {
+        return subject;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
 }
