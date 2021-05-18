@@ -16,6 +16,10 @@ import com.aldebaran.qi.sdk.object.conversation.Chat;
 import com.aldebaran.qi.sdk.object.conversation.QiChatbot;
 import com.aldebaran.qi.sdk.object.conversation.Topic;
 import com.aldebaran.qi.sdk.object.conversation.TopicStatus;
+import com.igu.pepperprofesor.question.Question;
+import com.igu.pepperprofesor.question.QuestionUtils;
+
+import java.util.List;
 
 public class MainActivity extends RobotActivity implements RobotLifecycleCallbacks {
     public static final String TAG = "MainActivityProfesor";
@@ -25,7 +29,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     QiChatbot qiChatbot;
     Chat chat;
     public static final int N_QUESTIONS = 10;
-    private int[] questions;
+    private List<Question> questions;
     private int puntuacion;
     private int current;
 
@@ -108,13 +112,13 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
 
     private void startSubject(Subject subject) {
         this.subject = subject;
-        questions = Utilities.randomNumbers(1, subject.getSize(), N_QUESTIONS);
+        questions = QuestionUtils.randomQuestions(N_QUESTIONS, subject);
         nextQuestion();
     }
 
     private void nextQuestion() {
-        if (current < N_QUESTIONS) {
-            goToQuestion(questions[current]);
+        if (current < questions.size()) {
+            goToQuestion(questions.get(current));
             current++;
         } else {
             qiChatbot.variable("puntos").setValue(Integer.toString(puntuacion));
@@ -136,8 +140,8 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
         goToBookmark("SELECCION");
     }
 
-    private void goToQuestion(int numero) {
-        goToBookmark(subject.name() + numero);
+    private void goToQuestion(Question question) {
+        goToBookmark(question.getBookmark());
     }
 
     private void goToResults() {

@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 
 import com.igu.pepperprofesor.Subject;
 
+import java.util.Locale;
+
 public class Question {
     private final int id;
     private final Subject subject;
@@ -15,17 +17,16 @@ public class Question {
         this.question = question;
     }
 
+    public String getBookmark() {
+        return subject.name() + id;
+    }
+
     public QuestionType getQuestionType() {
         return QuestionType.NORMAL;
     }
 
     public String getQuestionText() {
         return question;
-    }
-
-    @SuppressLint("DefaultLocale")
-    public String getBookmark() {
-        return String.format("%%%s%d", subject, id);
     }
 
     public Subject getSubject() {
