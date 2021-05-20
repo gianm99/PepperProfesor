@@ -1,9 +1,5 @@
 package com.igu.pepperprofesor.question;
 
-import android.os.Build;
-
-import androidx.annotation.RequiresApi;
-
 import com.igu.pepperprofesor.MainActivity;
 import com.igu.pepperprofesor.R;
 import com.igu.pepperprofesor.Subject;
