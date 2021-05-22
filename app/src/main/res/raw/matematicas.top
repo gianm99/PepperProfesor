@@ -221,13 +221,13 @@ El coche de Gustavo gasta 0,075 litros de gasolina por cada kilómetro recorrido
         u1:(*)
         $show="Incorrecto" ~incorrecto %INCORRECTO
 proposal: %MATEMATICAS35
-Milagros tenía 15,78 €. Compró dos libros que costaron 9,75 € y 4,99 €, respectivamente. Cuánto dinero le quedó? A, 1 coma 4. B, 1 coma 04 C, 1 coma 44
+Milagros tenía 15,78 €. Compró dos libros que costaron 9,75 € y 4,99 €, respectivamente. Cuánto dinero le quedó? A, 1 coma 4. B, 1 coma 04 C, 1 coma 44.
     u1:([B])
     $show="Correcto" ~correcto %CORRECTO
         u1:(*)
         $show="Incorrecto" ~incorrecto %INCORRECTO
 proposal: %MATEMATICAS36
-Paloma compró 100 gomas de borrar para venderlas en su papelería. Pagó por ellas 38 €. Después, vendió cada goma a 0,95 €. Cuánto dinero ganó por la venta de todas las gomas? A, 0 coma 57. B, 0 coma 75 C, 0 coma 95
+Paloma compró 100 gomas de borrar para venderlas en su papelería. Pagó por ellas 38 €. Después, vendió cada goma a 0,95 €. Cuánto dinero ganó por la venta de todas las gomas? A, 0 coma 57. B, 0 coma 75 C, 0 coma 95.
     u1:([A])
    $show="Correcto" ~correcto %CORRECTO
        u1:(*)
