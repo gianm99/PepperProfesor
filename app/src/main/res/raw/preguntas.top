@@ -805,7 +805,7 @@ Las edades de los tres hermanos de Aurora son tres números de una cifra consecu
        $show="Incorrecto" ~incorrecto %INCORRECTO
 proposal: %MATEMATICAS24
 Tres amigos han corrido en una carrera de 20 corredores. Sus tres dorsales eran números de dos cifras consecutivos y su producto era 2.730. Qué números llevaban los tres amigos en sus dorsales? A 13,14,15. B 10,11,12. C 16,17,18.
-    u1:([A])
+    u1:(A)
     $show="Correcto" ~correcto %CORRECTO
         u1:(*)
         $show="Incorrecto" ~incorrecto %INCORRECTO
@@ -835,7 +835,7 @@ El año pasado Lorena medía 1,58 m y este año mide 1,65 m. Cuántos centímetr
        $show="Incorrecto" ~incorrecto %INCORRECTO
 proposal: %MATEMATICAS29
 La profesora de Plástica ha cortado una cinta en 12 trozos de 10,5 cm cada uno. Cuánto medía la cinta? A, 1 m 26 cm. B, 1 m 16 cm. C, 2 m 6 cm.
-    u1:([A])
+    u1:(A)
    $show="Correcto" ~correcto %CORRECTO
        u1:(*)
        $show="Incorrecto" ~incorrecto %INCORRECTO
@@ -859,37 +859,37 @@ En una tienda compraron 25 neveras por 9.375 €. El mes siguiente, vendieron 18
        $show="Incorrecto" ~incorrecto %INCORRECTO
 proposal: %MATEMATICAS33
 En la frutería de Teresa, un kilo de pimientos cuesta 2,35 € y un kilo de zanahorias, 1,05 €. Marina ha comprado 2 kilos de pimientos y 1 kilo de zanahorias. Cuánto pagará en total? A, 6 coma 2. B, 8 coma 6. C, 8 coma 2.
-    u1:([A])
+    u1:(A)
     $show="Correcto" ~correcto %CORRECTO
         u1:(*)
         $show="Incorrecto" ~incorrecto %INCORRECTO
 proposal: %MATEMATICAS34
 El coche de Gustavo gasta 0,075 litros de gasolina por cada kilómetro recorrido. Esta semana Gustavo ha hecho un viaje de 125 km, otro viaje de 264 km y otro de 59 km. Cuántos litros de gasolina ha gastado? A, 38 coma 025. B, 35 coma 85. C, 35 coma 85.
-    u1:([A])
+    u1:(A)
     $show="Correcto" ~correcto %CORRECTO
         u1:(*)
         $show="Incorrecto" ~incorrecto %INCORRECTO
 proposal: %MATEMATICAS35
 Milagros tenía 15,78 €. Compró dos libros que costaron 9,75 € y 4,99 €, respectivamente. Cuánto dinero le quedó? A, 1 coma 4. B, 1 coma 04 C, 1 coma 44.
-    u1:([B])
+    u1:(B)
     $show="Correcto" ~correcto %CORRECTO
         u1:(*)
         $show="Incorrecto" ~incorrecto %INCORRECTO
 proposal: %MATEMATICAS36
 Paloma compró 100 gomas de borrar para venderlas en su papelería. Pagó por ellas 38 €. Después, vendió cada goma a 0,95 €. Cuánto dinero ganó por la venta de todas las gomas? A, 0 coma 57. B, 0 coma 75 C, 0 coma 95.
-    u1:([A])
+    u1:(A)
    $show="Correcto" ~correcto %CORRECTO
        u1:(*)
        $show="Incorrecto" ~incorrecto %INCORRECTO
     proposal: %MATEMATICAS37
 En una oficina han hecho hoy 120 llamadas de teléfono. Tres quintos han sido llamadas locales, 15 llamadas han sido nacionales y el resto, internacionales. Qué tipo de llamadas es el que más han hecho? A, Locales. B, Nacionales. C, Internacionales.
-    u1:([Internacionales])
+    u1:(Internacionales)
    $show="Correcto" ~correcto %CORRECTO
        u1:(*)
        $show="Incorrecto" ~incorrecto %INCORRECTO
 proposal: %MATEMATICAS38
 Un saltamontes dio tres saltos consecutivos. En el primero saltó 0,25 m y en cada uno de los siguientes saltó 0,09 cm más que en el anterior. Qué longitud saltó en total? A, 2 coma 64. B, 2 coma 25. C, 2 coma 09
-    u1:([A])
+    u1:(A)
    $show="Correcto" ~correcto %CORRECTO
        u1:(*)
        $show="Incorrecto" ~incorrecto %INCORRECTO
