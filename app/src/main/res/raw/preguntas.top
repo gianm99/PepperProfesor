@@ -648,6 +648,251 @@ Cuál fue el conflicto bélico más importante del siglo XX? A, Primera Guerra M
     $show="Correcto" ~correcto %CORRECTO
     u1:(*)
     $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS1
+Escribe el valor de CMLXII. A, 926. B, 962. C, 1962.
+    u1:([B 962])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS2
+
+Escribe el valor de MMDCCVI. A, 2706. B, 2506. C, 2556.
+    u1:([A 2706])
+   $show="Correcto" ~correcto %CORRECTO
+   u1:(*)
+   $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS3
+Escribe el valor de CMXLII. A, 942. B, 922. C, 1952.
+    u1:([A 942])
+   $show="Correcto" ~correcto %CORRECTO
+   u1:(*)
+   $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS4
+Escribe en números romanos 1987. A, MMLXXXVII. B, MCMLXXXVII. C, MCMLXXVII.
+    u1:([B MCMLXXXVII])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS5
+Escribe en números romanos 1439. A, CXXXIX. B, MCDXXXIX. C, CDXXXIX.
+    u1:([B MCDXXXIX])
+   $show="Correcto" ~correcto %CORRECTO
+   u1:(*)
+   $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS6
+Escribe en números romanos 1814. A, CXXXIX. B, CCDXXIX. C, MDCCCXIV.
+    u1:([C MDCCCXIV])
+   $show="Correcto" ~correcto %CORRECTO
+   u1:(*)
+   $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS7
+En una cafetería recibieron ayer un pedido de 9 packs de refrescos con 24 refrescos cada uno. Por la mañana han servido 15. Cuántos refrescos les quedan? A, 201. B, 136. C, 13.
+    u1:([A 201])
+   $show="Correcto" ~correcto %CORRECTO
+   u1:(*)
+   $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS8
+Mario ha anotado en un partido de baloncesto 8 triples y 26 canastas. Cuántos puntos ha anotado Mario? A, 76. B, 35. C, 70.
+   u1:([C 70])
+   $show="Correcto" ~correcto %CORRECTO
+   u1:(*)
+   $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS9
+A una gruta han llegado 16 coches con 5 personas en cada uno y otras 150 personas en autobuses. Cuántos visitantes han llegado en autobuses más que en coches? A, 15. B, 70. C, 20.
+    u1:([B 70])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS10
+Gustavo compra 16 botes de zumo a 2 € cada uno. Paga y le devuelven 3 €. Cuánto dinero ha entregado para pagar? A, 32. B, 35. C, 29.
+   u1:([B 35])
+   $show="Correcto" ~correcto %CORRECTO
+   u1:(*)
+   $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS11
+Para la clase de Plástica, Olga ha comprado 4 cajas con 12 ceras cada una y 2 cajas con 24 ceras cada una. Cuántas ceras ha comprado en total? A, 96. B, 36. C, 126.
+       u1:([C 126])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS12
+Carla ha comprado 4 libros de una colección. Cada libro cuesta 14 € y ha entregado para pagar 70 €. Cuánto dinero le devuelven? A, 56. B, 14. C, 16.
+    u1:([B 14])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS13
+Un frutero vendió 15 cajas de naranjas de 25 kilos cada una por un total de 1.125 €. Cuánto costaba cada kilo de naranjas? A, 3. B, 6. C, 2.
+    u1:([A 3])
+   $show="Correcto" ~correcto %CORRECTO
+   u1:(*)
+   $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS14
+Un cine llenó sus 250 butacas en todas las sesiones. En total asistieron 403 niños y 347 adultos. Cuántas sesiones hubo en el cine? A, 2.  B, 3. C, 4.
+    u1:([B 3])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS15
+Un grupo de 14 amigos ha ido a cenar. Han pagado 254 € por las pizzas y 96 € por los refrescos. El total lo han pagado a partes iguales. Cuánto ha tenido que poner cada uno? A, 25. B, 20. C, 15.
+    u1:([A 25])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS16
+Maite se ha comprado un coche por 14.600 €. Primero pagó 2.000 € y el resto lo pagará en 14 mensualidades iguales. Cuánto paga en cada mensualidad? A, 1400. B, 900. C, 1260.
+    u1:([B 900])
+   $show="Correcto" ~correcto %CORRECTO
+   u1:(*)
+   $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS17
+En un vivero pagaron 900 € por 18 cajas con 25 plantas cada una. Después, vendieron cada planta a 3 €. Cuánto ganaron en la venta de cada planta? A, 2. B, 3. C, 1.
+    u1:([C 1])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS18
+Un grupo de 312 personas quiere cruzar un lago. Un tercio cruzará en un barco y el resto, en barcas de 13 plazas. Cuántas barcas de 13 plazas utilizarán? A, 16. B, 14. C, 18.
+    u1:([A 16])
+    $show="Correcto" ~correcto %CORRECTO
+    u1:(*)
+    $show="Incorrecto" ~incorrecto %INCORRECTO
+
+proposal: %MATEMATICAS19
+Un circuito para bicicletas mide 15 km. Cristina ha recorrido un quinto del circuito y su prima Eva, dos tercios. Quién ha recorrido más kilómetros? Cuántos más? A, Eva. B, Cristina.
+    u1:([A Eva])
+   $show="Correcto" ~correcto %CORRECTO
+       u1:(*)
+       $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS20
+Alejandro tenía en su hucha 60 €. Se gastó un cuarto del dinero en un libro y un quinto en una camiseta. Cuánto dinero le quedó? A, 33. B, 27. C, 23.
+    u1:([B 27])
+    $show="Correcto" ~correcto %CORRECTO
+        u1:(*)
+        $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS21
+La capacidad del biberón de Natalia es de 25 centilitros. Natalia toma cada día un biberón completo y tres quintas partes de otro. Cuántos centilitros de leche toma Natalia al día? A, 30. B, 45. C, 40.
+    u1:([C 40])
+   $show="Correcto" ~correcto %CORRECTO
+       u1:(*)
+       $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS22
+Un camión y su carga pesan 5.000 kg. El camión pesa dos octavos del peso total. Cuántos kilos pesa la carga? A, 2150. B, 3750. C, 1520.
+    u1:([B 3750])
+    $show="Correcto" ~correcto %CORRECTO
+         u1:(*)
+         $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS23
+Las edades de los tres hermanos de Aurora son tres números de una cifra consecutivos. Su producto es 210. Qué edades son? A 5,6,7.  B 4,5,6. C 7,8,9.
+    u1:(A)
+   $show="Correcto" ~correcto %CORRECTO
+       u1:(*)
+       $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS24
+Tres amigos han corrido en una carrera de 20 corredores. Sus tres dorsales eran números de dos cifras consecutivos y su producto era 2.730. Qué números llevaban los tres amigos en sus dorsales? A 13,14,15. B 10,11,12. C 16,17,18.
+    u1:([A])
+    $show="Correcto" ~correcto %CORRECTO
+        u1:(*)
+        $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS25
+Juan ha comprado en rebajas 9 juegos de ordenador por 261 €. Cada juego por separado costaba 30 €. Cuánto se ha ahorrado Juan en total? A, 9. B, 1. C, 5.
+    u1:([A 9])
+    $show="Correcto" ~correcto %CORRECTO
+        u1:(*)
+        $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS26
+Una empresa está poniendo la instalación eléctrica a un bloque de 12 pisos. En cada piso emplean 137 metros de cable y llevan una bobina con 1.700 metros. Cuántos metros de cable les sobran? A, 65. B, 55. C, 56
+    u1:([A 56])
+   $show="Correcto" ~correcto %CORRECTO
+       u1:(*)
+       $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS27
+La longitud de una pista de atletismo es de 400 m. Cuántas vueltas completas se dan en una carrera de 10 km? A, 25. B, 50. C, 12.
+    u1:([A 25])
+   $show="Correcto" ~correcto %CORRECTO
+       u1:(*)
+       $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS28
+El año pasado Lorena medía 1,58 m y este año mide 1,65 m. Cuántos centímetros ha crecido Lorena? A, 7. B, 6. C, 5.
+    u1:([A 7])
+   $show="Correcto" ~correcto %CORRECTO
+       u1:(*)
+       $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS29
+La profesora de Plástica ha cortado una cinta en 12 trozos de 10,5 cm cada uno. Cuánto medía la cinta? A, 1 m 26 cm. B, 1 m 16 cm. C, 2 m 6 cm.
+    u1:([A])
+   $show="Correcto" ~correcto %CORRECTO
+       u1:(*)
+       $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS30
+En un colegio compraron 47 packs de 3 tetrabriks de zumo cada uno para el comedor. Han servido ya 87 tetrabriks. Cuántos packs les quedan? A, 64. B, 45. C, 54.
+    u1:([C 54])
+    $show="Correcto" ~correcto %CORRECTO
+        u1:(*)
+        $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS31
+ Lola cocinó 15 bandejas de cruasanes. En cada una había 28 cruasanes. Después, los envasó en bolsas de 3 cruasanes y vendió cada bolsa a 6 €. Cuánto dinero obtuvo? A, 489. B, 840. C, 880.
+    u1:([B 840])
+   $show="Correcto" ~correcto %CORRECTO
+       u1:(*)
+       $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS32
+En una tienda compraron 25 neveras por 9.375 €. El mes siguiente, vendieron 18 neveras. Cada una la vendieron 40 € más cara de lo que les costó. Cuánto dinero obtuvieron? A, 7470. B, 7740. C, 7704.
+    u1:([A 7470])
+   $show="Correcto" ~correcto %CORRECTO
+       u1:(*)
+       $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS33
+En la frutería de Teresa, un kilo de pimientos cuesta 2,35 € y un kilo de zanahorias, 1,05 €. Marina ha comprado 2 kilos de pimientos y 1 kilo de zanahorias. Cuánto pagará en total? A, 6 coma 2. B, 8 coma 6. C, 8 coma 2.
+    u1:([A])
+    $show="Correcto" ~correcto %CORRECTO
+        u1:(*)
+        $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS34
+El coche de Gustavo gasta 0,075 litros de gasolina por cada kilómetro recorrido. Esta semana Gustavo ha hecho un viaje de 125 km, otro viaje de 264 km y otro de 59 km. Cuántos litros de gasolina ha gastado? A, 38 coma 025. B, 35 coma 85. C, 35 coma 85.
+    u1:([A])
+    $show="Correcto" ~correcto %CORRECTO
+        u1:(*)
+        $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS35
+Milagros tenía 15,78 €. Compró dos libros que costaron 9,75 € y 4,99 €, respectivamente. Cuánto dinero le quedó? A, 1 coma 4. B, 1 coma 04 C, 1 coma 44.
+    u1:([B])
+    $show="Correcto" ~correcto %CORRECTO
+        u1:(*)
+        $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS36
+Paloma compró 100 gomas de borrar para venderlas en su papelería. Pagó por ellas 38 €. Después, vendió cada goma a 0,95 €. Cuánto dinero ganó por la venta de todas las gomas? A, 0 coma 57. B, 0 coma 75 C, 0 coma 95.
+    u1:([A])
+   $show="Correcto" ~correcto %CORRECTO
+       u1:(*)
+       $show="Incorrecto" ~incorrecto %INCORRECTO
+    proposal: %MATEMATICAS37
+En una oficina han hecho hoy 120 llamadas de teléfono. Tres quintos han sido llamadas locales, 15 llamadas han sido nacionales y el resto, internacionales. Qué tipo de llamadas es el que más han hecho? A, Locales. B, Nacionales. C, Internacionales.
+    u1:([Internacionales])
+   $show="Correcto" ~correcto %CORRECTO
+       u1:(*)
+       $show="Incorrecto" ~incorrecto %INCORRECTO
+proposal: %MATEMATICAS38
+Un saltamontes dio tres saltos consecutivos. En el primero saltó 0,25 m y en cada uno de los siguientes saltó 0,09 cm más que en el anterior. Qué longitud saltó en total? A, 2 coma 64. B, 2 coma 25. C, 2 coma 09
+    u1:([A])
+   $show="Correcto" ~correcto %CORRECTO
+       u1:(*)
+       $show="Incorrecto" ~incorrecto %INCORRECTO
 
 proposal: %RESULTADOS #poner sonidos si se puede
 ^first["$puntos<5 Ha ido mal el examen, has suspendido" "$puntos<7 Estás aprobado" "$puntos<9 Eso es un notable" "Eso es un excelente!"] ^enableThenGoto(FINAL)
