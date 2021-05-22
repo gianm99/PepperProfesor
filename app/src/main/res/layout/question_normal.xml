@@ -12,7 +12,7 @@
         android:layout_height="515dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/Pepper_portrait"
+        app:srcCompat="@drawable/pepper_portrait"
         tools:layout_editor_absoluteY="236dp" />
 
     <TextView
