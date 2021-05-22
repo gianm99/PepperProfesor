@@ -232,7 +232,7 @@ Paloma compró 100 gomas de borrar para venderlas en su papelería. Pagó por el
    $show="Correcto" ~correcto %CORRECTO
        u1:(*)
        $show="Incorrecto" ~incorrecto %INCORRECTO
-    proposal: %MATEMATICAS37
+proposal: %MATEMATICAS37
 En una oficina han hecho hoy 120 llamadas de teléfono. Tres quintos han sido llamadas locales, 15 llamadas han sido nacionales y el resto, internacionales. Qué tipo de llamadas es el que más han hecho? A, Locales. B, Nacionales. C, Internacionales.
     u1:([Internacionales])
    $show="Correcto" ~correcto %CORRECTO
