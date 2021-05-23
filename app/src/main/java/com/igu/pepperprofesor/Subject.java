@@ -13,7 +13,7 @@ public enum Subject {
             return "CASTELLANO";
         }
     },
-    MATEMATICAS(40){
+    MATEMATICAS(38){
         @NonNull
         @NotNull
         @Override
