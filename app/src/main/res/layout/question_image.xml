@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,76 +7,22 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="458dp"
-        android:layout_height="326dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="208dp"
+        android:layout_width="373dp"
+        android:layout_height="292dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="910dp"
-        android:layout_height="129dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="40dp"
+        android:id="@+id/textView8"
+        android:layout_width="830dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="36dp"
         android:text="Pregunta"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:text="A"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        tools:layout_editor_absoluteY="295dp" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:text="C"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        tools:layout_editor_absoluteY="579dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="389dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="48dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        tools:layout_editor_absoluteY="297dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="389dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="48dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        tools:layout_editor_absoluteY="579dp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="389dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="48dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        tools:layout_editor_absoluteY="441dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:text="B"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        tools:layout_editor_absoluteY="439dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

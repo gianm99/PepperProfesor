@@ -327,7 +327,7 @@ public class QuestionUtils {
                         Arrays.asList(new Option('a', "13,14,15"),
                                 new Option('b', "10,11,12"),
                                 new Option('c', "16,17,18"))),
-                new OptionQuestion(MATEMATICAS, 25, "Juan ha comprado en rebajas 9 juegos de ordenador por 261 €. Cada juego por separado costaba 30 €. Cuánto se ha ahorrado Juan en total?",
+                new OptionQuestion(MATEMATICAS, 25, "Juan ha comprado en rebajas 9 juegos de ordenador por 261 €. Cada juego por separado costaba 30 €. ¿Cuánto se ha ahorrado Juan en total?",
                         Arrays.asList(new Option('a', "9"),
                                 new Option('b', "1"),
                                 new Option('c', "5"))),
