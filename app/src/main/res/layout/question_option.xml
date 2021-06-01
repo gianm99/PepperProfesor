@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="830dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Pregunta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Una empresa está poniendo la instalación eléctrica a un bloque de 12 pisos. En cada piso emplean 137 metros de cable y llevan una bobina con 1.700 metros. ¿Cuántos metros de cable les sobran?" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="389dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="28dp"
+        android:text="TextView"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.286"
+        app:layout_constraintStart_toEndOf="@+id/button14" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="68dp"
+        android:text="B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button13" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="389dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="32dp"
+        android:text="TextView"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toEndOf="@+id/button13" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="104dp"
+        android:text="C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button14"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="160dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="389dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:text="TextView"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintStart_toEndOf="@+id/button15" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
