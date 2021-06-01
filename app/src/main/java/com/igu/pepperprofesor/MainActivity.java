@@ -1,5 +1,6 @@
 package com.igu.pepperprofesor;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -34,6 +35,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     private int current;
 
 
+    @SuppressLint("MissingSuperCall")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
         current = 0;
     }
 
+    @SuppressLint("MissingSuperCall")
     @Override
     protected void onDestroy() {
         // Unregister the RobotLifecycleCallbacks for this Activity.
