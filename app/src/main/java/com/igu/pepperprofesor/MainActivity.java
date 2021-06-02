@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.fragment.app.FragmentTransaction;
+
 import com.aldebaran.qi.sdk.QiContext;
 import com.aldebaran.qi.sdk.QiSDK;
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks;
@@ -18,12 +20,16 @@ import com.aldebaran.qi.sdk.object.conversation.QiChatbot;
 import com.aldebaran.qi.sdk.object.conversation.Topic;
 import com.aldebaran.qi.sdk.object.conversation.TopicStatus;
 import com.igu.pepperprofesor.question.Question;
+import com.igu.pepperprofesor.question.QuestionType;
 import com.igu.pepperprofesor.question.QuestionUtils;
 
 import java.util.List;
 
-public class MainActivity extends RobotActivity implements RobotLifecycleCallbacks {
+import static com.igu.pepperprofesor.question.QuestionType.NORMAL;
+
+public class MainActivity extends RobotActivity implements RobotLifecycleCallbacks  {
     public static final String TAG = "MainActivityProfesor";
+    FragmentTransaction fragmentTransaction;
     Topic topicPreguntas;
     TopicStatus topicStatusPreguntas;
     Subject subject;
@@ -116,6 +122,11 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     private void startSubject(Subject subject) {
         this.subject = subject;
         questions = QuestionUtils.randomQuestions(N_QUESTIONS, subject);
+        Bundle bundle = new Bundle();
+        bundle.putString("edttext", questions.get(current).getQuestion());
+// set Fragmentclass Arguments
+        questionfragment fragobj = new questionfragment();
+        fragobj.setArguments(bundle);
         nextQuestion();
     }
 
@@ -157,6 +168,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
                 AutonomousReactionImportance.HIGH,
                 AutonomousReactionValidity.IMMEDIATE
         );
+
     }
 
 
