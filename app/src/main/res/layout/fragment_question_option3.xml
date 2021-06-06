@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/fondoazulyrojo"
     android:layout_height="match_parent"
-    tools:context=".option3fragment">
+    tools:context=".fragment.ThreeOptionQuestionFragment">
 
     <TextView
         android:id="@+id/enunciado"

@@ -27,7 +27,7 @@ public class TitleFragment extends Fragment implements  View.OnClickListener{
     @Nullable
        @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_titlefragment, container, false);
+        View view = inflater.inflate(R.layout.fragment_title, container, false);
         logo = view.findViewById(R.id.logo);
         logo.setOnClickListener(this);
 

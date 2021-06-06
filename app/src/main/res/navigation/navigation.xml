@@ -9,7 +9,7 @@
         android:id="@+id/titlefragment"
         android:name="com.igu.pepperprofesor.fragment.TitleFragment"
         android:label="fragment_titlefragment"
-        tools:layout="@layout/fragment_titlefragment" >
+        tools:layout="@layout/fragment_title" >
         <action
             android:id="@+id/action_titlefragment_to_questionfragment"
             app:destination="@id/questionfragment" />

@@ -1,4 +1,4 @@
-package com.igu.pepperprofesor;
+package com.igu.pepperprofesor.fragment;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.igu.pepperprofesor.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link option2fragment#newInstance} factory method to
+ * Use the {@link TwoOptionQuestionFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class option2fragment extends Fragment {
+public class TwoOptionQuestionFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class option2fragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public option2fragment() {
+    public TwoOptionQuestionFragment() {
         // Required empty public constructor
     }
 
@@ -37,8 +39,8 @@ public class option2fragment extends Fragment {
      * @return A new instance of fragment option2fragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static option2fragment newInstance(String param1, String param2) {
-        option2fragment fragment = new option2fragment();
+    public static TwoOptionQuestionFragment newInstance(String param1, String param2) {
+        TwoOptionQuestionFragment fragment = new TwoOptionQuestionFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class option2fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_option2fragment, container, false);
+        return inflater.inflate(R.layout.fragment_question_option2, container, false);
     }
 }
