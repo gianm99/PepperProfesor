@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 
 import org.jetbrains.annotations.NotNull;
 
-public class Option {
+import java.io.Serializable;
+
+public class Option implements Serializable {
     private final char letter;
     private final String text;
 

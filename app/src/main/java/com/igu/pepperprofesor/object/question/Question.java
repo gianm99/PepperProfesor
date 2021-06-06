@@ -2,7 +2,9 @@ package com.igu.pepperprofesor.object.question;
 
 import com.igu.pepperprofesor.object.Subject;
 
-public class Question {
+import java.io.Serializable;
+
+public class Question implements Serializable {
     private final int id;
     private final Subject subject;
     private final String question;
