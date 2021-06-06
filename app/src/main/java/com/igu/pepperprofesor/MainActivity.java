@@ -19,7 +19,6 @@ import com.aldebaran.qi.sdk.object.conversation.Chat;
 import com.aldebaran.qi.sdk.object.conversation.QiChatbot;
 import com.aldebaran.qi.sdk.object.conversation.Topic;
 import com.aldebaran.qi.sdk.object.conversation.TopicStatus;
-import com.igu.pepperprofesor.fragment.QuestionFragment;
 import com.igu.pepperprofesor.object.Subject;
 import com.igu.pepperprofesor.object.question.Question;
 import com.igu.pepperprofesor.util.QuestionUtils;
@@ -124,8 +123,8 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
         Bundle bundle = new Bundle();
         bundle.putString("edttext", questions.get(current).getQuestion());
 // set Fragmentclass Arguments
-        QuestionFragment fragobj = new QuestionFragment();
-        fragobj.setArguments(bundle);
+//        QuestionFragment fragobj = new QuestionFragment();
+//        fragobj.setArguments(bundle);
         nextQuestion();
     }
 

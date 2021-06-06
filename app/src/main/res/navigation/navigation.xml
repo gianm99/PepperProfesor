@@ -3,22 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/titlefragment">
-
+    app:startDestination="@id/twoOptionQuestionFragment">
     <fragment
-        android:id="@+id/titlefragment"
-        android:name="com.igu.pepperprofesor.fragment.TitleFragment"
-        android:label="fragment_titlefragment"
-        tools:layout="@layout/fragment_title" >
-        <action
-            android:id="@+id/action_titlefragment_to_questionfragment"
-            app:destination="@id/questionfragment" />
-        <action
-            android:id="@+id/action_titlefragment_self"
-            app:destination="@id/titlefragment" />
-    </fragment>
+        android:id="@+id/twoOptionQuestionFragment"
+        android:name="com.igu.pepperprofesor.fragment.TwoOptionQuestionFragment"
+        android:label="fragment_question_option2"
+        tools:layout="@layout/fragment_question_option2" />
     <fragment
-        android:id="@+id/questionfragment"
+        android:id="@+id/threeOptionQuestionFragment"
+        android:name="com.igu.pepperprofesor.fragment.ThreeOptionQuestionFragment"
+        android:label="fragment_question_option3"
+        tools:layout="@layout/fragment_question_option3" />
+    <fragment
+        android:id="@+id/questionFragment"
         android:name="com.igu.pepperprofesor.fragment.QuestionFragment"
-        android:label="questionfragment" />
+        android:label="QuestionFragment" />
 </navigation>
