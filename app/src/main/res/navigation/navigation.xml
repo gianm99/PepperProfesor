@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/titlefragment"
-        android:name="com.igu.pepperprofesor.titlefragment"
+        android:name="com.igu.pepperprofesor.fragment.TitleFragment"
         android:label="fragment_titlefragment"
         tools:layout="@layout/fragment_titlefragment" >
         <action
@@ -19,6 +19,6 @@
     </fragment>
     <fragment
         android:id="@+id/questionfragment"
-        android:name="com.igu.pepperprofesor.questionfragment"
+        android:name="com.igu.pepperprofesor.fragment.QuestionFragment"
         android:label="questionfragment" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.igu.pepperprofesor;
+package com.igu.pepperprofesor.fragment;
 
 import android.os.Bundle;
 
@@ -13,8 +13,10 @@ import android.widget.ImageButton;
 
 import androidx.navigation.Navigation;
 
+import com.igu.pepperprofesor.R;
 
-public class titlefragment extends Fragment implements  View.OnClickListener{
+
+public class TitleFragment extends Fragment implements  View.OnClickListener{
 
   ImageButton logo;
 

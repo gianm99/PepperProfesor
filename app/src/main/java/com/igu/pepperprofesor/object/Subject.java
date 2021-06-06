@@ -1,4 +1,4 @@
-package com.igu.pepperprofesor;
+package com.igu.pepperprofesor.object;
 
 import androidx.annotation.NonNull;
 

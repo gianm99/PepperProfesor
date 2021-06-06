@@ -1,17 +1,13 @@
-package com.igu.pepperprofesor.question;
+package com.igu.pepperprofesor.object.question;
 
-import android.annotation.SuppressLint;
-
-import com.igu.pepperprofesor.Subject;
-
-import java.util.Locale;
+import com.igu.pepperprofesor.object.Subject;
 
 public class Question {
     private final int id;
     private final Subject subject;
     private final String question;
 
-    Question(Subject subject, int id, String question) {
+    public Question(Subject subject, int id, String question) {
         this.id = id;
         this.subject = subject;
         this.question = question;

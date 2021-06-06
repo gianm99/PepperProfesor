@@ -1,6 +1,6 @@
-package com.igu.pepperprofesor.question;
+package com.igu.pepperprofesor.object.question;
 
-import com.igu.pepperprofesor.Subject;
+import com.igu.pepperprofesor.object.Subject;
 
 import java.util.List;
 

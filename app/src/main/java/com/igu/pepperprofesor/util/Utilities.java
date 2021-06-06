@@ -1,4 +1,4 @@
-package com.igu.pepperprofesor;
+package com.igu.pepperprofesor.util;
 
 import java.util.Random;
 

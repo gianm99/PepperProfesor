@@ -1,17 +1,20 @@
-package com.igu.pepperprofesor.question;
+package com.igu.pepperprofesor.util;
 
 import com.igu.pepperprofesor.MainActivity;
 import com.igu.pepperprofesor.R;
-import com.igu.pepperprofesor.Subject;
-import com.igu.pepperprofesor.Utilities;
+import com.igu.pepperprofesor.object.Subject;
+import com.igu.pepperprofesor.object.question.ImageQuestion;
+import com.igu.pepperprofesor.object.question.Option;
+import com.igu.pepperprofesor.object.question.OptionQuestion;
+import com.igu.pepperprofesor.object.question.Question;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.igu.pepperprofesor.Subject.CASTELLANO;
-import static com.igu.pepperprofesor.Subject.MATEMATICAS;
-import static com.igu.pepperprofesor.Subject.SOCIALES;
+import static com.igu.pepperprofesor.object.Subject.CASTELLANO;
+import static com.igu.pepperprofesor.object.Subject.MATEMATICAS;
+import static com.igu.pepperprofesor.object.Subject.SOCIALES;
 
 public class QuestionUtils {
     private static final List<Question> questions;

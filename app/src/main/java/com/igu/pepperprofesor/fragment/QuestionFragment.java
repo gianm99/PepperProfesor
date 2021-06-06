@@ -1,4 +1,4 @@
-package com.igu.pepperprofesor;
+package com.igu.pepperprofesor.fragment;
 
 import android.os.Bundle;
 
@@ -9,11 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.igu.pepperprofesor.R;
 
-public class questionfragment extends Fragment {
+
+public class QuestionFragment extends Fragment {
 
 
-    public questionfragment() {
+    public QuestionFragment() {
         // Required empty public constructor
     }
 

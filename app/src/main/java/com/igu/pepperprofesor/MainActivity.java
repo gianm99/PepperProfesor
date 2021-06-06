@@ -19,13 +19,12 @@ import com.aldebaran.qi.sdk.object.conversation.Chat;
 import com.aldebaran.qi.sdk.object.conversation.QiChatbot;
 import com.aldebaran.qi.sdk.object.conversation.Topic;
 import com.aldebaran.qi.sdk.object.conversation.TopicStatus;
-import com.igu.pepperprofesor.question.Question;
-import com.igu.pepperprofesor.question.QuestionType;
-import com.igu.pepperprofesor.question.QuestionUtils;
+import com.igu.pepperprofesor.fragment.QuestionFragment;
+import com.igu.pepperprofesor.object.Subject;
+import com.igu.pepperprofesor.object.question.Question;
+import com.igu.pepperprofesor.util.QuestionUtils;
 
 import java.util.List;
-
-import static com.igu.pepperprofesor.question.QuestionType.NORMAL;
 
 public class MainActivity extends RobotActivity implements RobotLifecycleCallbacks  {
     public static final String TAG = "MainActivityProfesor";
@@ -125,7 +124,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
         Bundle bundle = new Bundle();
         bundle.putString("edttext", questions.get(current).getQuestion());
 // set Fragmentclass Arguments
-        questionfragment fragobj = new questionfragment();
+        QuestionFragment fragobj = new QuestionFragment();
         fragobj.setArguments(bundle);
         nextQuestion();
     }
