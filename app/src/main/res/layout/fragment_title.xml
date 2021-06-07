@@ -9,7 +9,7 @@
     tools:context=".fragment.TitleFragment">
 
     <ImageButton
-        android:id="@+id/logo"
+        android:id="@+id/logoImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/pepperbirrete"

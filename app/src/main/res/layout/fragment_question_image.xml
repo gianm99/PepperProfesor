@@ -9,21 +9,21 @@
     android:screenOrientation="landscape">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageQuestionImage"
         android:layout_width="373dp"
         android:layout_height="292dp"
         android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/violin" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/imageQuestionText"
         android:layout_width="830dp"
         android:layout_height="125dp"
         android:layout_marginTop="140dp"
-        android:text="Pregunta"
+        tools:text="¿Cómo se llama la persona que toca este instrumento?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.348"
         app:layout_constraintStart_toStartOf="parent"

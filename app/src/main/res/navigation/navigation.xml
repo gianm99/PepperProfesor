@@ -8,7 +8,7 @@
         android:id="@+id/twoOptionQuestionFragment"
         android:name="com.igu.pepperprofesor.fragment.TwoOptionQuestionFragment"
         android:label="fragment_question_option2"
-        tools:layout="@layout/fragment_question_option2" >
+        tools:layout="@layout/fragment_question_option3" >
         <argument
             android:name="question"
             app:argType="com.igu.pepperprofesor.object.question.OptionQuestion" />
@@ -20,7 +20,7 @@
         android:id="@+id/threeOptionQuestionFragment"
         android:name="com.igu.pepperprofesor.fragment.ThreeOptionQuestionFragment"
         android:label="fragment_question_option3"
-        tools:layout="@layout/fragment_question_option3" >
+        tools:layout="@layout/fragment_question_option2" >
         <argument
             android:name="question"
             app:argType="com.igu.pepperprofesor.object.question.OptionQuestion" />

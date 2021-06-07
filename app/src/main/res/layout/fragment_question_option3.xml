@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout4"
+    android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondoazulyrojo"
@@ -10,11 +10,10 @@
     tools:context=".fragment.ThreeOptionQuestionFragment">
 
     <TextView
-        android:id="@+id/enunciado"
+        android:id="@+id/threeOptionQuestionText"
         android:layout_width="813dp"
         android:layout_height="62dp"
         android:layout_marginTop="104dp"
-        android:text="@string/enunciado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,43 +21,59 @@
         tools:text="Una empresa está poniendo la instalación eléctrica a un bloque de 12 pisos. En cada piso emplean 137 metros de cable y llevan una bobina con 1.700 metros. ¿Cuántos metros de cable les sobran?" />
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/threeOptionQuestionAButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
-        android:text="@string/b"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+        tools:text="@string/a"
+        app:layout_constraintBaseline_toBaselineOf="@+id/threeOptionQuestionAText"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="95dp"
-        android:text="@string/brespuesta"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button14"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:text="@string/a"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/threeOptionQuestionAText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="95dp"
-        android:text="@string/arespuesta"
-        app:layout_constraintStart_toEndOf="@+id/button13"
-        app:layout_constraintTop_toBottomOf="@+id/enunciado" />
+        app:layout_constraintStart_toEndOf="@+id/threeOptionQuestionAButton"
+        app:layout_constraintTop_toBottomOf="@+id/threeOptionQuestionText"
+        tools:text="66" />
 
+    <Button
+        android:id="@+id/threeOptionQuestionBButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:text="@string/b"
+        app:layout_constraintBaseline_toBaselineOf="@+id/threeOptionQuestionBText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/threeOptionQuestionBText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toEndOf="@+id/threeOptionQuestionBButton"
+        app:layout_constraintTop_toBottomOf="@+id/threeOptionQuestionAText"
+        tools:text="55" />
+
+    <Button
+        android:id="@+id/threeOptionQuestionCButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:text="@string/c"
+        app:layout_constraintBaseline_toBaselineOf="@+id/threeOptionQuestionCText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/threeOptionQuestionCText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/threeOptionQuestionCButton"
+        tools:text="56" />
 </androidx.constraintlayout.widget.ConstraintLayout>

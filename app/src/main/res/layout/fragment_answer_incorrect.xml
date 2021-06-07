@@ -9,7 +9,7 @@
     tools:context=".fragment.IncorrectAnswerFragment">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/incorrectoImage"
         android:layout_width="675dp"
         android:layout_height="350dp"
         android:contentDescription="@string/incorrecto"
