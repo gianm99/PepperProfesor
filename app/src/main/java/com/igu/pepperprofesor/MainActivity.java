@@ -1,6 +1,5 @@
 package com.igu.pepperprofesor;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -21,6 +20,7 @@ import com.aldebaran.qi.sdk.object.conversation.QiChatbot;
 import com.aldebaran.qi.sdk.object.conversation.Topic;
 import com.aldebaran.qi.sdk.object.conversation.TopicStatus;
 import com.igu.pepperprofesor.databinding.ActivityMainBinding;
+import com.igu.pepperprofesor.databinding.FragmentQuestionBinding;
 import com.igu.pepperprofesor.object.Subject;
 import com.igu.pepperprofesor.object.question.ImageQuestion;
 import com.igu.pepperprofesor.object.question.OptionQuestion;
@@ -144,19 +144,20 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     }
 
     private void showQuestion(Question question) {
-        NavController navController = Navigation.findNavController(this, R.id.navigation);
+        NavController navController = Navigation.findNavController(this, R.id.myNavHostFragment);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("question", question);
+        bundle.putInt("questionNumber", current + 1);
         if (question instanceof OptionQuestion) {
-            OptionQuestion optionQuestion = (OptionQuestion) question;
-            if (optionQuestion.getOptionList().size() < 3) {
-                navController.navigate(R.id.action_global_twoOptionQuestionFragment);
+            if (((OptionQuestion) question).getOptionList().size() < 3) {
+                navController.navigate(R.id.action_global_twoOptionQuestionFragment, bundle);
             } else {
-                navController.navigate(R.id.action_global_threeOptionQuestionFragment);
+                navController.navigate(R.id.action_global_threeOptionQuestionFragment, bundle);
             }
         } else if (question instanceof ImageQuestion) {
-            ImageQuestion imageQuestion = (ImageQuestion) question;
-            navController.navigate(R.id.action_global_imageQuestionFragment);
+            navController.navigate(R.id.action_global_imageQuestionFragment, bundle);
         } else {
-            navController.navigate(R.id.action_global_questionFragment);
+            navController.navigate(R.id.action_global_questionFragment, bundle);
         }
     }
 
