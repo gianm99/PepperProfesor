@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/twoOptionQuestionFragment">
+    app:startDestination="@id/titleFragment">
     <fragment
         android:id="@+id/twoOptionQuestionFragment"
         android:name="com.igu.pepperprofesor.fragment.TwoOptionQuestionFragment"
@@ -65,5 +65,5 @@
         android:id="@+id/incorrectAnswerFragment"
         android:name="com.igu.pepperprofesor.fragment.IncorrectAnswerFragment"
         android:label="fragment_answer_incorrect"
-        tools:layout="@layout/fragment_answer_incorrect" /><action android:id="@+id/action_global_questionFragment" app:destination="@id/questionFragment"/><action android:id="@+id/action_global_twoOptionQuestionFragment2" app:destination="@id/twoOptionQuestionFragment"/><action android:id="@+id/action_global_imageQuestionFragment2" app:destination="@id/imageQuestionFragment"/><action android:id="@+id/action_global_threeOptionQuestionFragment" app:destination="@id/threeOptionQuestionFragment"/><action android:id="@+id/action_global_correctAnswerFragment" app:destination="@id/correctAnswerFragment"/><action android:id="@+id/action_global_incorrectAnswerFragment" app:destination="@id/incorrectAnswerFragment"/>
+        tools:layout="@layout/fragment_answer_incorrect" /><action android:id="@+id/action_global_questionFragment" app:destination="@id/questionFragment"/><action android:id="@+id/action_global_twoOptionQuestionFragment" app:destination="@id/twoOptionQuestionFragment"/><action android:id="@+id/action_global_imageQuestionFragment" app:destination="@id/imageQuestionFragment"/><action android:id="@+id/action_global_threeOptionQuestionFragment" app:destination="@id/threeOptionQuestionFragment"/><action android:id="@+id/action_global_correctAnswerFragment" app:destination="@id/correctAnswerFragment"/><action android:id="@+id/action_global_incorrectAnswerFragment" app:destination="@id/incorrectAnswerFragment"/>
 </navigation>
