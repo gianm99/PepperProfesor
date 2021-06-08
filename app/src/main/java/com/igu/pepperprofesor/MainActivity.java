@@ -4,7 +4,8 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 
-import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.aldebaran.qi.sdk.QiContext;
 import com.aldebaran.qi.sdk.QiSDK;
@@ -19,38 +20,43 @@ import com.aldebaran.qi.sdk.object.conversation.Chat;
 import com.aldebaran.qi.sdk.object.conversation.QiChatbot;
 import com.aldebaran.qi.sdk.object.conversation.Topic;
 import com.aldebaran.qi.sdk.object.conversation.TopicStatus;
+import com.igu.pepperprofesor.databinding.ActivityMainBinding;
 import com.igu.pepperprofesor.object.Subject;
+import com.igu.pepperprofesor.object.question.ImageQuestion;
+import com.igu.pepperprofesor.object.question.OptionQuestion;
 import com.igu.pepperprofesor.object.question.Question;
 import com.igu.pepperprofesor.util.QuestionUtils;
 
 import java.util.List;
 
-public class MainActivity extends RobotActivity implements RobotLifecycleCallbacks  {
-    public static final String TAG = "MainActivityProfesor";
-    FragmentTransaction fragmentTransaction;
-    Topic topicPreguntas;
-    TopicStatus topicStatusPreguntas;
-    Subject subject;
-    QiChatbot qiChatbot;
-    Chat chat;
+public class MainActivity extends RobotActivity implements RobotLifecycleCallbacks {
+    // General
     public static final int N_QUESTIONS = 10;
     private List<Question> questions;
     private int puntuacion;
     private int current;
+    public static final String TAG = "MainActivityProfesor";
+    public ActivityMainBinding binding;
+    // Chat con Pepper
+    Topic topic;
+    Subject subject;
+    QiChatbot qiChatbot;
+    Chat chat;
+    TopicStatus topicStatusPreguntas;
 
 
-    @SuppressLint("MissingSuperCall")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Use view binding
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         // Register the RobotLifecycleCallbacks to this Activity.
-        setContentView(R.layout.activity_main);
         QiSDK.register(this, this);
         puntuacion = 0;
         current = 0;
     }
 
-    @SuppressLint("MissingSuperCall")
     @Override
     protected void onDestroy() {
         // Unregister the RobotLifecycleCallbacks for this Activity.
@@ -66,9 +72,9 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     }
 
     private void initChatbot(QiContext qiContext) {
-        topicPreguntas = TopicBuilder.with(qiContext).withResource(R.raw.preguntas).build();
-        qiChatbot = QiChatbotBuilder.with(qiContext).withTopic(topicPreguntas).build();
-        topicStatusPreguntas = qiChatbot.topicStatus(topicPreguntas);
+        topic = TopicBuilder.with(qiContext).withResource(R.raw.preguntas).build();
+        qiChatbot = QiChatbotBuilder.with(qiContext).withTopic(topic).build();
+        topicStatusPreguntas = qiChatbot.topicStatus(topic);
         chat = ChatBuilder.with(qiContext).withChatbot(qiChatbot).build();
     }
 
@@ -122,19 +128,35 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
         questions = QuestionUtils.randomQuestions(N_QUESTIONS, subject);
         Bundle bundle = new Bundle();
         bundle.putString("edttext", questions.get(current).getQuestion());
-// set Fragmentclass Arguments
-//        QuestionFragment fragobj = new QuestionFragment();
-//        fragobj.setArguments(bundle);
         nextQuestion();
     }
 
     private void nextQuestion() {
         if (current < questions.size()) {
-            goToQuestion(questions.get(current));
+            Question currentQuestion = questions.get(current);
+            showQuestion(currentQuestion);
+            goToQuestion(currentQuestion);
             current++;
         } else {
             qiChatbot.variable("puntos").setValue(Integer.toString(puntuacion));
             goToResults();
+        }
+    }
+
+    private void showQuestion(Question question) {
+        NavController navController = Navigation.findNavController(this, R.id.navigation);
+        if (question instanceof OptionQuestion) {
+            OptionQuestion optionQuestion = (OptionQuestion) question;
+            if (optionQuestion.getOptionList().size() < 3) {
+                navController.navigate(R.id.action_global_twoOptionQuestionFragment);
+            } else {
+                navController.navigate(R.id.action_global_threeOptionQuestionFragment);
+            }
+        } else if (question instanceof ImageQuestion) {
+            ImageQuestion imageQuestion = (ImageQuestion) question;
+            navController.navigate(R.id.action_global_imageQuestionFragment);
+        } else {
+            navController.navigate(R.id.action_global_questionFragment);
         }
     }
 
@@ -162,7 +184,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
 
     private void goToBookmark(String bookmarkName) {
         qiChatbot.goToBookmark(
-                topicPreguntas.getBookmarks().get(bookmarkName),
+                topic.getBookmarks().get(bookmarkName),
                 AutonomousReactionImportance.HIGH,
                 AutonomousReactionValidity.IMMEDIATE
         );
