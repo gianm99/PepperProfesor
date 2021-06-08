@@ -20,7 +20,6 @@ import com.aldebaran.qi.sdk.object.conversation.QiChatbot;
 import com.aldebaran.qi.sdk.object.conversation.Topic;
 import com.aldebaran.qi.sdk.object.conversation.TopicStatus;
 import com.igu.pepperprofesor.databinding.ActivityMainBinding;
-import com.igu.pepperprofesor.databinding.FragmentQuestionBinding;
 import com.igu.pepperprofesor.object.Subject;
 import com.igu.pepperprofesor.object.question.ImageQuestion;
 import com.igu.pepperprofesor.object.question.OptionQuestion;
@@ -33,7 +32,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     // General
     public static final int N_QUESTIONS = 10;
     private List<Question> questions;
-    private int puntuacion;
+    private int score;
     private int current;
     public static final String TAG = "MainActivityProfesor";
     public ActivityMainBinding binding;
@@ -53,7 +52,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
         setContentView(binding.getRoot());
         // Register the RobotLifecycleCallbacks to this Activity.
         QiSDK.register(this, this);
-        puntuacion = 0;
+        score = 0;
         current = 0;
     }
 
@@ -111,12 +110,12 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     }
 
     private void resetScore() {
-        puntuacion = 0;
+        score = 0;
         current = 0;
     }
 
     private void aumentarPuntuacion() {
-        puntuacion++;
+        score++;
     }
 
     private void goToIntroduction() {
@@ -138,7 +137,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
             goToQuestion(currentQuestion);
             current++;
         } else {
-            qiChatbot.variable("puntos").setValue(Integer.toString(puntuacion));
+            qiChatbot.variable("puntos").setValue(Integer.toString(score));
             goToResults();
         }
     }
