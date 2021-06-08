@@ -1,17 +1,15 @@
-package com.igu.pepperprofesor.question;
+package com.igu.pepperprofesor.object.question;
 
-import android.annotation.SuppressLint;
+import com.igu.pepperprofesor.object.Subject;
 
-import com.igu.pepperprofesor.Subject;
+import java.io.Serializable;
 
-import java.util.Locale;
-
-public class Question {
+public class Question implements Serializable {
     private final int id;
     private final Subject subject;
     private final String question;
 
-    Question(Subject subject, int id, String question) {
+    public Question(Subject subject, int id, String question) {
         this.id = id;
         this.subject = subject;
         this.question = question;

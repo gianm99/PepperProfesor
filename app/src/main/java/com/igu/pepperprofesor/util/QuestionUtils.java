@@ -1,17 +1,20 @@
-package com.igu.pepperprofesor.question;
+package com.igu.pepperprofesor.util;
 
 import com.igu.pepperprofesor.MainActivity;
 import com.igu.pepperprofesor.R;
-import com.igu.pepperprofesor.Subject;
-import com.igu.pepperprofesor.Utilities;
+import com.igu.pepperprofesor.object.Subject;
+import com.igu.pepperprofesor.object.question.ImageQuestion;
+import com.igu.pepperprofesor.object.question.Option;
+import com.igu.pepperprofesor.object.question.OptionQuestion;
+import com.igu.pepperprofesor.object.question.Question;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.igu.pepperprofesor.Subject.CASTELLANO;
-import static com.igu.pepperprofesor.Subject.MATEMATICAS;
-import static com.igu.pepperprofesor.Subject.SOCIALES;
+import static com.igu.pepperprofesor.object.Subject.CASTELLANO;
+import static com.igu.pepperprofesor.object.Subject.MATEMATICAS;
+import static com.igu.pepperprofesor.object.Subject.SOCIALES;
 
 public class QuestionUtils {
     private static final List<Question> questions;
@@ -208,19 +211,19 @@ public class QuestionUtils {
                         Arrays.asList(new Option('a', "X"),
                                 new Option('b', "S"))),
                 new Question(CASTELLANO, 34, "¿Cuáles son las siglas del Documento Nacional de Identidad?"),
-                new OptionQuestion(CASTELLANO, 35, "La oración Martín es una joya tiene",
+                new OptionQuestion(CASTELLANO, 35, "La oración 'Martín es una joya' tiene",
                         Arrays.asList(new Option('a', "Sentido literal"),
                                 new Option('b', "Sentido figurado"))),
-                new OptionQuestion(CASTELLANO, 36, "La oración Eva es una lapa, no te la quitas de encima tiene",
+                new OptionQuestion(CASTELLANO, 36, "La oración 'Eva es una lapa, no te la quitas de encima' tiene",
                         Arrays.asList(new Option('a', "Sentido literal"),
                                 new Option('b', "Sentido figurado"))),
-                new OptionQuestion(CASTELLANO, 37, "La oración Entro en el gallinero a recoger los huevos tiene",
+                new OptionQuestion(CASTELLANO, 37, "La oración 'Entro en el gallinero a recoger los huevos' tiene",
                         Arrays.asList(new Option('a', "Sentido literal"),
                                 new Option('b', "Sentido figurado"))),
-                new OptionQuestion(CASTELLANO, 38, "En Alicia escribió un cuento precioso. Un cuento precioso es",
+                new OptionQuestion(CASTELLANO, 38, "En 'Alicia escribió un cuento precioso', un cuento precioso es",
                         Arrays.asList(new Option('a', "Complemento indirecto CI"),
                                 new Option('b', "Complemento directo CD"))),
-                new OptionQuestion(CASTELLANO, 39, "En Vino ayer su primo Juan. Ayer es",
+                new OptionQuestion(CASTELLANO, 39, "En 'Vino ayer su primo Juan', ayer es",
                         Arrays.asList(new Option('a', "Complemento circunstancial de modo"),
                                 new Option('b', "Complemento circunstancial de tiempo"))),
                 new OptionQuestion(CASTELLANO, 40, "Algo que no es legal es",

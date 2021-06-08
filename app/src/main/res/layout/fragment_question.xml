@@ -2,22 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondoazulyrojo"
-    tools:context=".titlefragment">
+    tools:context=".fragment.QuestionFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/preguntaAbierta"
+        android:id="@+id/questionText"
         android:layout_width="830dp"
         android:layout_height="125dp"
-        android:text="@string/pregunta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="¿En qué planeta del sistema solar a parte de la Tierra se encuentra el Monte Olimpo?" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

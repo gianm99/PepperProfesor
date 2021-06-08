@@ -1,6 +1,6 @@
-package com.igu.pepperprofesor.question;
+package com.igu.pepperprofesor.object.question;
 
-import com.igu.pepperprofesor.Subject;
+import com.igu.pepperprofesor.object.Subject;
 
 public class ImageQuestion extends Question {
     private final int imageId;
