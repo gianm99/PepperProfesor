@@ -31,6 +31,7 @@ import java.util.List;
 public class MainActivity extends RobotActivity implements RobotLifecycleCallbacks {
     // General
     public static final int N_QUESTIONS = 10;
+    public static final int ANSWER_DELAY = 3 * 1000;
     private List<Question> questions;
     private int score;
     private int current;
@@ -93,10 +94,14 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
                     goToSelection();
                     break;
                 case "CORRECTO":
-                    aumentarPuntuacion();
+                    showAnswer(true);
+                    increaseScore();
+                    waitFor(ANSWER_DELAY);
                     nextQuestion();
                     break;
                 case "INCORRECTO":
+                    showAnswer(false);
+                    waitFor(ANSWER_DELAY);
                     nextQuestion();
                     break;
                 case "OTRO_EXAMEN":
@@ -109,12 +114,20 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
         topicStatusPreguntas.addOnFocusedChangedListener(focused -> Log.i(TAG, "addOnFocusedChanged: " + focused));
     }
 
+    private void waitFor(long millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void resetScore() {
         score = 0;
         current = 0;
     }
 
-    private void aumentarPuntuacion() {
+    private void increaseScore() {
         score++;
     }
 
@@ -157,6 +170,15 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
             navController.navigate(R.id.action_global_imageQuestionFragment, bundle);
         } else {
             navController.navigate(R.id.action_global_questionFragment, bundle);
+        }
+    }
+
+    private void showAnswer(boolean isCorrect) {
+        NavController navController = Navigation.findNavController(this, R.id.myNavHostFragment);
+        if (isCorrect) {
+            navController.navigate(R.id.action_global_correctAnswerFragment);
+        } else {
+            navController.navigate(R.id.action_global_incorrectAnswerFragment);
         }
     }
 
