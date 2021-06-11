@@ -10,17 +10,6 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="462dp"
-        android:layout_height="336dp"
-        android:layout_marginTop="92dp"
-        android:src="@drawable/pngkey_com_oscar_trophy_png_8117820"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/puntos"
         android:layout_width="wrap_content"
@@ -32,7 +21,8 @@
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="de 10" />
 
     <TextView
         android:id="@+id/score"
@@ -49,5 +39,13 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="25" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="442dp"
+        tools:layout_editor_absoluteY="265dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

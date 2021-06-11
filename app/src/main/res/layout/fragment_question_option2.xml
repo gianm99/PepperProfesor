@@ -79,10 +79,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="92dp"
-        android:text="@string/arespuesta"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/botonA2"
-        app:layout_constraintTop_toBottomOf="@+id/enunciado2" />
+        app:layout_constraintTop_toBottomOf="@+id/enunciado2"
+        tools:text="arespuesta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

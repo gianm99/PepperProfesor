@@ -12,7 +12,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/incorrectoTitle"
+        android:text="@string/titleincorrecto"
         android:textColor="#000000"
         android:textSize="144sp"
         android:textStyle="bold"
