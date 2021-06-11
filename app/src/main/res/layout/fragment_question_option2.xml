@@ -7,57 +7,68 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondoazulyrojo"
     android:screenOrientation="landscape"
-    tools:context=".fragment.TwoOptionQuestionFragment">
+    tools:context=".fragment.ThreeOptionQuestionFragment">
 
     <TextView
-        android:id="@+id/twoOptionQuestionText"
-        android:layout_width="813dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="104dp"
+        android:id="@+id/enunciado2"
+        android:layout_width="823dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="84dp"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="En 'Alicia escribió un cuento precioso' un cuento precioso es" />
+        tools:text="Una empresa está poniendo la instalación eléctrica a un bloque de 12 pisos. En cada piso emplean 137 metros de cable y llevan una bobina con 1.700 metros. ¿Cuántos metros de cable les sobran?" />
 
     <Button
-        android:id="@+id/button13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:text="@string/a"
-        app:layout_constraintBaseline_toBaselineOf="@+id/twoOptionQuestionAText"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/twoOptionQuestionAText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="95dp"
-        app:layout_constraintStart_toEndOf="@+id/button13"
-        app:layout_constraintTop_toBottomOf="@+id/twoOptionQuestionText"
-        tools:text="Complemento indirecto CI" />
-
-    <Button
-        android:id="@+id/twoOptionQuestionBButton"
+        android:id="@+id/botonB2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
         android:text="@string/b"
-        app:layout_constraintBaseline_toBaselineOf="@+id/twoOptionQuestionBText"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/respuestaB2"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/twoOptionQuestionBText"
+        android:id="@+id/respuestaB2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="80dp"
         android:layout_marginBottom="95dp"
+        android:text="@string/brespuesta"
+        android:textColor="#000000"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/twoOptionQuestionBButton"
-        app:layout_constraintTop_toBottomOf="@+id/twoOptionQuestionAText"
-        tools:text="Complemento directo CD" />
+        app:layout_constraintStart_toEndOf="@+id/botonB2"
+        app:layout_constraintTop_toBottomOf="@+id/respuestaA2" />
+
+    <Button
+        android:id="@+id/botonA2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:text="@string/a"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/respuestaA2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/respuestaA2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="92dp"
+        android:text="@string/arespuesta"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/botonA2"
+        app:layout_constraintTop_toBottomOf="@+id/enunciado2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,28 +2,31 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondoazulyrojo"
-    tools:context=".fragment.ImageQuestionFragment"
     android:screenOrientation="landscape">
 
     <ImageView
-        android:id="@+id/imageQuestionImage"
+        android:id="@+id/imageView3"
         android:layout_width="373dp"
         android:layout_height="292dp"
         android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@drawable/violin" />
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/imageQuestionText"
+        android:id="@+id/textView8"
         android:layout_width="830dp"
         android:layout_height="125dp"
         android:layout_marginTop="140dp"
-        tools:text="¿Cómo se llama la persona que toca este instrumento?"
+        android:text="Pregunta"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.348"
         app:layout_constraintStart_toStartOf="parent"
