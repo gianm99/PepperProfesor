@@ -10,10 +10,24 @@
     tools:context=".fragment.ThreeOptionQuestionFragment">
 
     <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="72dp"
+        android:text="@string/score"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="40" />
+
+    <TextView
         android:id="@+id/enunciado2"
         android:layout_width="823dp"
         android:layout_height="145dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="104dp"
         android:textAlignment="textStart"
         android:textColor="#000000"
         android:textSize="30sp"
