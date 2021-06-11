@@ -6,7 +6,7 @@ concept:(incorrecto) ^rand["Vaya, es incorrecto!" "Otra vez será" "Vaya, parece
 
 # hacer una introducción del juego
 proposal: %INTRO
-Buenos días, si quieres comprobar tu conocimiento sobre el castellano, las matemáticas o las ciencias sociales, este es tu juego! ^goto(SELECCION)
+Buenos días, si quieres comprobar tu conocimiento sobre el castellano, las matemáticas o las ciencias sociales, este es tu juego! %FIN_INTRO
 
 # preguntar el tema del examen
 u: (vamos a jugar) %SELECCION Cuál quieres que sea el tema del examen? Matemáticas, Sociales o Castellano?
@@ -900,4 +900,4 @@ proposal: %RESULTADOS #poner sonidos si se puede
 proposal: %FINAL
 Ya has terminado el examen, quieres hacer otro o prefieres dejarlo por hoy?
     u1:(otro {examen}) %OTRO_EXAMEN ^enable(RESULTADOS)
-    u1:(*) Hasta la próxima! Que tengas un buen día! ^releaseFocus
+    u1:(*) Hasta la próxima! Que tengas un buen día! %TERMINAR_JUEGO ^releaseFocus

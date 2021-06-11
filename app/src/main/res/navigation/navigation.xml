@@ -43,7 +43,11 @@
         android:id="@+id/titleFragment"
         android:name="com.igu.pepperprofesor.fragment.TitleFragment"
         android:label="fragment_title"
-        tools:layout="@layout/fragment_title" />
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_subjectSelectionFragment"
+            app:destination="@id/subjectSelectionFragment" />
+    </fragment>
     <fragment
         android:id="@+id/questionFragment"
         android:name="com.igu.pepperprofesor.fragment.QuestionFragment"
@@ -66,4 +70,29 @@
         android:name="com.igu.pepperprofesor.fragment.IncorrectAnswerFragment"
         android:label="fragment_answer_incorrect"
         tools:layout="@layout/fragment_answer_incorrect" /><action android:id="@+id/action_global_questionFragment" app:destination="@id/questionFragment"/><action android:id="@+id/action_global_twoOptionQuestionFragment" app:destination="@id/twoOptionQuestionFragment"/><action android:id="@+id/action_global_imageQuestionFragment" app:destination="@id/imageQuestionFragment"/><action android:id="@+id/action_global_threeOptionQuestionFragment" app:destination="@id/threeOptionQuestionFragment"/><action android:id="@+id/action_global_correctAnswerFragment" app:destination="@id/correctAnswerFragment"/><action android:id="@+id/action_global_incorrectAnswerFragment" app:destination="@id/incorrectAnswerFragment"/>
+    <fragment
+        android:id="@+id/subjectSelectionFragment"
+        android:name="com.igu.pepperprofesor.fragment.SubjectSelectionFragment"
+        android:label="fragment_subject_selection"
+        tools:layout="@layout/fragment_subject_selection" />
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.igu.pepperprofesor.fragment.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" >
+        <action
+            android:id="@+id/action_scoreFragment_to_subjectSelectionFragment"
+            app:destination="@id/subjectSelectionFragment" />
+        <argument
+            android:name="score"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="subject"
+            app:argType="com.igu.pepperprofesor.object.Subject" />
+        <action
+            android:id="@+id/action_scoreFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
+    <action android:id="@+id/action_global_scoreFragment" app:destination="@id/scoreFragment" />
 </navigation>

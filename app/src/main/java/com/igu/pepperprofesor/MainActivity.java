@@ -91,7 +91,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
                     startSubject(Subject.SOCIALES);
                     break;
                 case "TEMA_INCORRECTO":
-                    goToSelection();
+                    goToSelectionBookmark();
                     break;
                 case "CORRECTO":
                     showAnswer(true);
@@ -106,7 +106,13 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
                     break;
                 case "OTRO_EXAMEN":
                     resetScore();
-                    goToSelection();
+                    goToSelection(false);
+                    break;
+                case "FIN_INTRO":
+                    goToSelection(true);
+                    break;
+                case "TERMINAR_JUEGO":
+                    goToStartingScreen();
                     break;
             }
         });
@@ -133,6 +139,10 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
 
     private void goToIntroduction() {
         goToBookmark("INTRO");
+    }
+
+    private void goToStartingScreen() {
+        Navigation.findNavController(this, R.id.myNavHostFragment).navigate(R.id.action_scoreFragment_to_titleFragment);
     }
 
     private void startSubject(Subject subject) {
@@ -192,7 +202,16 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
         Log.i(TAG, String.format("Focus rechazado por %s", reason));
     }
 
-    private void goToSelection() {
+    private void goToSelection(boolean wait) {
+        NavController navController = Navigation.findNavController(this, R.id.myNavHostFragment);
+        if (wait) {
+            waitFor(2000L);
+            navController.navigate(R.id.action_titleFragment_to_subjectSelectionFragment);
+        } else navController.navigate(R.id.action_scoreFragment_to_subjectSelectionFragment);
+        goToSelectionBookmark();
+    }
+
+    private void goToSelectionBookmark() {
         goToBookmark("SELECCION");
     }
 
@@ -201,6 +220,10 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     }
 
     private void goToResults() {
+        Bundle bundle = new Bundle();
+        bundle.putInt("score", score);
+        bundle.putSerializable("subject", subject);
+        Navigation.findNavController(this, R.id.myNavHostFragment).navigate(R.id.action_global_scoreFragment, bundle);
         goToBookmark("RESULTADOS");
     }
 
@@ -212,6 +235,4 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
         );
 
     }
-
-
 }
