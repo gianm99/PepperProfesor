@@ -2,23 +2,23 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout7"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondoazulyrojo"
-    android:screenOrientation="landscape"
-    tools:context=".fragment.IncorrectAnswerFragment">
+    android:background="@color/red"
+    tools:context=".incorrectofragment">
 
-    <ImageView
-        android:id="@+id/incorrectoImage"
-        android:layout_width="675dp"
-        android:layout_height="350dp"
-        android:contentDescription="@string/incorrecto"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/incorrectoTitle"
+        android:textColor="#000000"
+        android:textSize="144sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571"
-        app:srcCompat="@drawable/incorrectofull" />
-
+        tools:text="INCORRECTO" />
 </androidx.constraintlayout.widget.ConstraintLayout>
