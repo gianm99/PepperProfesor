@@ -12,7 +12,7 @@ Buenos días, si quieres comprobar tu conocimiento sobre el castellano, las mate
 u: (vamos a jugar) %SELECCION Cuál quieres que sea el tema del examen? Matemáticas, Sociales o Castellano?
     u1:(castellano)
     De acuerdo, empecemos el examen de Castellano! %CASTELLANO
-    u1:(matematicas)
+    u1:([matematicas matemáticas])
     De acuerdo, empecemos el examen de Matemáticas! %MATEMATICAS
     u1:(sociales)
     De acuerdo, empecemos el examen de Sociales! %SOCIALES
