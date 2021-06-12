@@ -4,10 +4,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
 import com.igu.pepperprofesor.R;
+import com.igu.pepperprofesor.object.question.OptionQuestion;
+import com.igu.pepperprofesor.object.question.Question;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,10 +24,10 @@ public class ThreeOptionQuestionFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
+    // TODO: Rename and change types of parameters
+    private OptionQuestion q;
+    private int qNumber;
     public ThreeOptionQuestionFragment() {
         // Required empty public constructor
     }
@@ -51,8 +54,8 @@ public class ThreeOptionQuestionFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            q = (OptionQuestion) getArguments().getSerializable("question");
+            qNumber=  getArguments().getInt("questionNumber");
         }
     }
 
@@ -60,6 +63,17 @@ public class ThreeOptionQuestionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_question_option3, container, false);
+        View view = inflater.inflate(R.layout.fragment_question_option3, container, false);
+        TextView t = (TextView) view.findViewById(R.id.enunciado3);
+        TextView n = (TextView) view.findViewById(R.id.score3);
+        TextView rA = (TextView) view.findViewById(R.id.respuestaA3);
+        TextView rB = (TextView) view.findViewById(R.id.respuestaB3);
+        TextView rC = (TextView) view.findViewById(R.id.respuestaC3);
+        t.setText(q.getQuestion());
+        rA.setText(q.getOptionList().get(0).getText());
+        rB.setText(q.getOptionList().get(1).getText());
+        rC.setText(q.getOptionList().get(2).getText());
+        n.setText(Integer.toString(qNumber));
+        return view;
     }
 }

@@ -9,7 +9,7 @@
     android:screenOrientation="landscape">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/scoreqi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -23,10 +23,11 @@
         tools:text="40" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imagenP"
         android:layout_width="373dp"
         android:layout_height="292dp"
         android:layout_marginBottom="36dp"
+        android:contentDescription="@string/imagenpregunta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -4,10 +4,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
 import com.igu.pepperprofesor.R;
+import com.igu.pepperprofesor.object.question.ImageQuestion;
+import com.igu.pepperprofesor.object.question.OptionQuestion;
+import com.igu.pepperprofesor.object.question.Question;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,10 +24,9 @@ public class QuestionFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private Question q;
+    private int qNumber;
 
     public QuestionFragment() {
         // Required empty public constructor
@@ -43,6 +46,7 @@ public class QuestionFragment extends Fragment {
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -51,15 +55,19 @@ public class QuestionFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+            q = (Question) getArguments().getSerializable("question");
+            qNumber=  getArguments().getInt("questionNumber");
+            }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_question, container, false);
+        View view = inflater.inflate(R.layout.fragment_question, container, false);
+        TextView t = (TextView) view.findViewById(R.id.preguntaAbierta);
+        TextView n = (TextView) view.findViewById(R.id.scoreq);
+        t.setText(q.getQuestion());
+              n.setText(Integer.toString(qNumber));
+        return view;
     }
 }

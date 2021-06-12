@@ -7,11 +7,19 @@
     <string name="fondo">fondo</string>
     <string name="pregunta">pregunta</string>
     <string name="enunciado">enunciado</string>
+    <string name="enunciado3">enunciado3</string>
+    <string name="score3">score3</string>
     <string name="incorrecto">incorrecto</string>
     <string name="logo">logo</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="score">score</string>
-    <string name="titlecorrecto">titlecorrecto</string>
-    <string name="titleincorrecto">titleincorrecto</string>
+      <string name="score">score</string>
+    <string name="titlecorrecto">CORRECTO</string>
+    <string name="titleincorrecto">INCORRECTO</string>
     <string name="brespuesta">brespuesta</string>
+    <string name="respuestaa2">respuestaA2</string>
+    <string name="respuestaa3">respuestaA2</string>
+    <string name="respuestab2">respuestaB2</string>
+    <string name="respuestab3">respuestaA2</string>
+    <string name="respuestac3">respuestaC3</string>
+    <string name="respuestac2">respuestaA2</string>
+    <string name="imagenpregunta">imagenPregunta</string>
 </resources>

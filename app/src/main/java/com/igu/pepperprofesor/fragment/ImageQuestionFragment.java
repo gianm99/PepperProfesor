@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -25,7 +26,7 @@ public class ImageQuestionFragment extends Fragment {
 
     // TODO: Rename and change types of parameters
     private ImageQuestion q;
-    private String mParam2;
+    private int qNumber;
 
     public ImageQuestionFragment() {
         // Required empty public constructor
@@ -54,7 +55,7 @@ public class ImageQuestionFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             q = (ImageQuestion) getArguments().getSerializable("question");
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            qNumber=  getArguments().getInt("questionNumber");
         }
     }
 
@@ -63,7 +64,11 @@ public class ImageQuestionFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_question_image, container, false);
         TextView t = (TextView) view.findViewById(R.id.enunciadoImagen);
+        TextView n = (TextView) view.findViewById(R.id.scoreqi);
+        ImageView iv= (ImageView) view.findViewById(R.id.imagenP);
         t.setText(q.getQuestion());
+        n.setText(Integer.toString(qNumber));
+        iv.
         return view;
     }
 }
