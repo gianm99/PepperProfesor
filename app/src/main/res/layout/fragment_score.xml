@@ -41,11 +41,16 @@
         tools:text="25" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/notaScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="442dp"
-        tools:layout_editor_absoluteY="265dp" />
+        android:text="@string/nota"
+        android:textColor="#FFC107"
+        android:textSize="136sp"
+        app:layout_constraintBottom_toTopOf="@+id/score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.612" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

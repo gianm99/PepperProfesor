@@ -38,13 +38,12 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="40" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonA2"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
-        android:background="@color/green"
         android:text="@string/a"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/respuestaA3"
@@ -63,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/enunciado3"
         tools:text="Respuesta de la opción A" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonB2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -87,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/respuestaA3"
         tools:text="Respuesta de la opción B" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonC3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

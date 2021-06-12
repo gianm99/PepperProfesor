@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Una empresa está poniendo la instalación eléctrica a un bloque de 12 pisos. En cada piso emplean 137 metros de cable y llevan una bobina con 1.700 metros. ¿Cuántos metros de cable les sobran?" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonB2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
         app:layout_constraintStart_toEndOf="@+id/botonB2"
         app:layout_constraintTop_toBottomOf="@+id/respuestaA3" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonA2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,7 +82,6 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="92dp"
         android:textColor="#000000"
-        style="@style/Widget.AppCompat.Button.Colored"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/botonA2"
         app:layout_constraintTop_toBottomOf="@+id/enunciado2"
