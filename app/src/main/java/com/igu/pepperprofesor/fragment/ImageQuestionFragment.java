@@ -68,7 +68,7 @@ public class ImageQuestionFragment extends Fragment {
         ImageView iv= (ImageView) view.findViewById(R.id.imagenP);
         t.setText(q.getQuestion());
         n.setText(Integer.toString(qNumber));
-        iv.
+        iv.setImageResource(q.getImageId());
         return view;
     }
 }
