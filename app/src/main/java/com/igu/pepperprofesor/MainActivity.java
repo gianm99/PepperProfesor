@@ -108,6 +108,9 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
                     resetScore();
                     goToSelection(false);
                     break;
+                case "SELECCION":
+                    Navigation.findNavController(this, R.id.myNavHostFragment)
+                            .navigate(R.id.action_titleFragment_to_subjectSelectionFragment);
                 case "FIN_INTRO":
                     goToSelection(true);
                     break;
