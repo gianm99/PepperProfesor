@@ -63,9 +63,9 @@ public class ImageQuestionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_question_image, container, false);
-        TextView t = (TextView) view.findViewById(R.id.enunciadoImagen);
-        TextView n = (TextView) view.findViewById(R.id.scoreqi);
-        ImageView iv= (ImageView) view.findViewById(R.id.imagenP);
+        TextView t = view.findViewById(R.id.enunciadoImagen);
+        TextView n = view.findViewById(R.id.scoreqi);
+        ImageView iv= view.findViewById(R.id.imagenP);
         t.setText(q.getQuestion());
         n.setText(Integer.toString(qNumber));
         iv.setImageResource(q.getImageId());
