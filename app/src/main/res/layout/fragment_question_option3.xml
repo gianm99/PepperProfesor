@@ -40,12 +40,13 @@
 
     <Button
         android:id="@+id/botonA2"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
+        android:background="@color/green"
         android:text="@string/a"
         android:textSize="24sp"
-        app:iconTint="#673AB7"
         app:layout_constraintBaseline_toBaselineOf="@+id/respuestaA3"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -67,6 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:text="@string/b"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/respuestaB3"
@@ -90,6 +92,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:text="@string/c"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/respuestaC3"
