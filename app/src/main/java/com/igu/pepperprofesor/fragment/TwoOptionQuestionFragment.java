@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import com.igu.pepperprofesor.R;
+import com.igu.pepperprofesor.object.question.OptionQuestion;
 import com.igu.pepperprofesor.object.question.Question;
 
 /**
@@ -19,7 +20,7 @@ import com.igu.pepperprofesor.object.question.Question;
 public class TwoOptionQuestionFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private Question q;
+    private OptionQuestion q;
     private int qNumber;
 
     public TwoOptionQuestionFragment() {
@@ -48,7 +49,7 @@ public class TwoOptionQuestionFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            q = (Question) getArguments().getSerializable("question");
+            q = (OptionQuestion) getArguments().getSerializable("question");
             qNumber = getArguments().getInt("questionNumber");
         }
     }
@@ -60,7 +61,11 @@ public class TwoOptionQuestionFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_question_option2, container, false);
         TextView t = (TextView) view.findViewById(R.id.enunciado2);
         TextView n = (TextView) view.findViewById(R.id.score2);
-        t.setText(q.getQuestion());
+        TextView rA = (TextView) view.findViewById(R.id.respuestaA3);
+        TextView rB = (TextView) view.findViewById(R.id.respuestaB3);
+             t.setText(q.getQuestion());
+        rA.setText(q.getOptionList().get(0).getText());
+        rB.setText(q.getOptionList().get(1).getText());
         n.setText(Integer.toString(qNumber));
         return view;
     }
