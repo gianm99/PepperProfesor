@@ -13,16 +13,30 @@
         android:id="@+id/enunciado3"
         android:layout_width="823dp"
         android:layout_height="145dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="104dp"
+        android:text="@string/enunciado3"
         android:textAlignment="textStart"
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Una empresa está poniendo la instalación eléctrica a un bloque de 12 pisos. En cada piso emplean 137 metros de cable y llevan una bobina con 1.700 metros. ¿Cuántos metros de cable les sobran?" />
+
+    <TextView
+        android:id="@+id/score3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="72dp"
+        android:text="@string/score3"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="40" />
 
     <Button
         android:id="@+id/botonA2"
@@ -31,15 +45,17 @@
         android:layout_marginStart="144dp"
         android:text="@string/a"
         android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/respuestaA2"
+        app:iconTint="#673AB7"
+        app:layout_constraintBaseline_toBaselineOf="@+id/respuestaA3"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/respuestaA2"
+        android:id="@+id/respuestaA3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
         android:layout_marginTop="36dp"
+        android:text="@string/respuestaa3"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/botonA2"
@@ -53,19 +69,20 @@
         android:layout_marginStart="144dp"
         android:text="@string/b"
         android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/respuestaB2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/respuestaB3"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/respuestaB2"
+        android:id="@+id/respuestaB3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="80dp"
+        android:text="@string/respuestab3"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/botonB2"
-        app:layout_constraintTop_toBottomOf="@+id/respuestaA2"
+        app:layout_constraintTop_toBottomOf="@+id/respuestaA3"
         tools:text="Respuesta de la opción B" />
 
     <Button
@@ -84,11 +101,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="80dp"
+        android:text="@string/respuestac3"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botonC3"
-        app:layout_constraintTop_toBottomOf="@+id/respuestaB2"
+        app:layout_constraintTop_toBottomOf="@+id/respuestaB3"
         app:layout_constraintVertical_bias="0.0"
         tools:text="Respuesta de la opción C" />
 </androidx.constraintlayout.widget.ConstraintLayout>

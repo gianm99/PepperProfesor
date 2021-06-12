@@ -155,9 +155,8 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
 
     private void nextQuestion() {
         if (current < questions.size()) {
-            Question currentQuestion = questions.get(current);
-            showQuestion(currentQuestion);
-            goToQuestion(currentQuestion);
+            showQuestion(questions.get(current));
+            goToQuestion(questions.get(current));
             current++;
         } else {
             qiChatbot.variable("puntos").setValue(Integer.toString(score));

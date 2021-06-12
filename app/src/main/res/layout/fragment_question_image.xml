@@ -8,18 +8,33 @@
     android:background="@drawable/fondoazulyrojo"
     android:screenOrientation="landscape">
 
+    <TextView
+        android:id="@+id/scoreqi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="72dp"
+        android:text="@string/score"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="40" />
+
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imagenP"
         android:layout_width="373dp"
         android:layout_height="292dp"
         android:layout_marginBottom="36dp"
+        android:contentDescription="@string/imagenpregunta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/enunciadoImagen"
         android:layout_width="830dp"
         android:layout_height="125dp"
         android:layout_marginTop="140dp"

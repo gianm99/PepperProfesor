@@ -23,10 +23,6 @@ public class Question implements Serializable {
         return QuestionType.NORMAL;
     }
 
-    public String getQuestionText() {
-        return question;
-    }
-
     public Subject getSubject() {
         return subject;
     }

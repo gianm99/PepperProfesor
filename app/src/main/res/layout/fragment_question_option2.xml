@@ -10,10 +10,24 @@
     tools:context=".fragment.ThreeOptionQuestionFragment">
 
     <TextView
+        android:id="@+id/score2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="72dp"
+        android:text="@string/score"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="40" />
+
+    <TextView
         android:id="@+id/enunciado2"
         android:layout_width="823dp"
         android:layout_height="145dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="104dp"
         android:textAlignment="textStart"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -31,22 +45,22 @@
         android:layout_marginStart="144dp"
         android:text="@string/b"
         android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/respuestaB2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/respuestaB3"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/respuestaB2"
+        android:id="@+id/respuestaB3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="80dp"
         android:layout_marginBottom="95dp"
-        android:text="@string/brespuesta"
+        android:text="@string/respuestab2"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botonB2"
-        app:layout_constraintTop_toBottomOf="@+id/respuestaA2" />
+        app:layout_constraintTop_toBottomOf="@+id/respuestaA3" />
 
     <Button
         android:id="@+id/botonA2"
@@ -56,19 +70,19 @@
         android:text="@string/a"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/respuestaA2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/respuestaA3"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/respuestaA2"
+        android:id="@+id/respuestaA3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="92dp"
-        android:text="@string/arespuesta"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/botonA2"
-        app:layout_constraintTop_toBottomOf="@+id/enunciado2" />
+        app:layout_constraintTop_toBottomOf="@+id/enunciado2"
+        tools:text="@string/respuestaa2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
