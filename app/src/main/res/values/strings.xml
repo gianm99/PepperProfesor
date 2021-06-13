@@ -22,4 +22,5 @@
     <string name="respuestac3">respuestaC3</string>
     <string name="respuestac2">respuestaA2</string>
     <string name="imagenpregunta">imagenPregunta</string>
+    <string name="nota">Nota</string>
 </resources>
