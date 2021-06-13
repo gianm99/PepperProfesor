@@ -32,6 +32,9 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     // General
     public static final int N_QUESTIONS = 10;
     public static final int ANSWER_DELAY = 3 * 1000;
+    public static final String QUESTION_KEY = "question";
+    public static final String QUESTION_NUMBER_KEY = "questionNumber";
+    public static final String SCORE_KEY = "score";
     private List<Question> questions;
     private int score;
     private int current;
@@ -170,8 +173,8 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     private void showQuestion(Question question) {
         NavController navController = Navigation.findNavController(this, R.id.myNavHostFragment);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("question", question);
-        bundle.putInt("questionNumber", current + 1);
+        bundle.putSerializable(QUESTION_KEY, question);
+        bundle.putInt(QUESTION_NUMBER_KEY, current + 1);
         if (question instanceof OptionQuestion) {
             if (((OptionQuestion) question).getOptionList().size() < 3) {
                 navController.navigate(R.id.action_global_twoOptionQuestionFragment, bundle);

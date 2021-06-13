@@ -6,7 +6,7 @@
     app:startDestination="@id/titleFragment">
     <fragment
         android:id="@+id/twoOptionQuestionFragment"
-        android:name="com.igu.pepperprofesor.fragment.TwoOptionQuestionFragment"
+        android:name="com.igu.pepperprofesor.fragment.question.TwoOptionQuestionFragment"
         android:label="fragment_question_option2"
         tools:layout="@layout/fragment_question_option3" >
         <argument
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/threeOptionQuestionFragment"
-        android:name="com.igu.pepperprofesor.fragment.ThreeOptionQuestionFragment"
+        android:name="com.igu.pepperprofesor.fragment.question.ThreeOptionQuestionFragment"
         android:label="fragment_question_option3"
         tools:layout="@layout/fragment_question_option2" >
         <argument
@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/imageQuestionFragment"
-        android:name="com.igu.pepperprofesor.fragment.ImageQuestionFragment"
+        android:name="com.igu.pepperprofesor.fragment.question.ImageQuestionFragment"
         android:label="ImageQuestionFragment" >
         <argument
             android:name="question"
@@ -50,7 +50,7 @@
     </fragment>
     <fragment
         android:id="@+id/questionFragment"
-        android:name="com.igu.pepperprofesor.fragment.QuestionFragment"
+        android:name="com.igu.pepperprofesor.fragment.question.QuestionFragment"
         android:label="fragment_question"
         tools:layout="@layout/fragment_question" >
         <argument
@@ -62,12 +62,12 @@
     </fragment>
     <fragment
         android:id="@+id/correctAnswerFragment"
-        android:name="com.igu.pepperprofesor.fragment.CorrectAnswerFragment"
+        android:name="com.igu.pepperprofesor.fragment.answer.CorrectAnswerFragment"
         android:label="fragment_answer_correct"
         tools:layout="@layout/fragment_answer_correct" />
     <fragment
         android:id="@+id/incorrectAnswerFragment"
-        android:name="com.igu.pepperprofesor.fragment.IncorrectAnswerFragment"
+        android:name="com.igu.pepperprofesor.fragment.answer.IncorrectAnswerFragment"
         android:label="fragment_answer_incorrect"
         tools:layout="@layout/fragment_answer_incorrect" /><action android:id="@+id/action_global_questionFragment" app:destination="@id/questionFragment"/><action android:id="@+id/action_global_twoOptionQuestionFragment" app:destination="@id/twoOptionQuestionFragment"/><action android:id="@+id/action_global_imageQuestionFragment" app:destination="@id/imageQuestionFragment"/><action android:id="@+id/action_global_threeOptionQuestionFragment" app:destination="@id/threeOptionQuestionFragment"/><action android:id="@+id/action_global_correctAnswerFragment" app:destination="@id/correctAnswerFragment"/><action android:id="@+id/action_global_incorrectAnswerFragment" app:destination="@id/incorrectAnswerFragment"/>
     <fragment

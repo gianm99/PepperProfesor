@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondoazulyrojo"
     android:screenOrientation="landscape"
-    tools:context=".fragment.ThreeOptionQuestionFragment">
+    tools:context=".fragment.question.ThreeOptionQuestionFragment">
 
     <TextView
         android:id="@+id/score2"
