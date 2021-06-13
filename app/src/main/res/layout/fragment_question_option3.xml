@@ -38,14 +38,14 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="40" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonA2"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
         android:text="@string/a"
         android:textSize="24sp"
-        app:iconTint="#673AB7"
         app:layout_constraintBaseline_toBaselineOf="@+id/respuestaA3"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -53,8 +53,8 @@
         android:id="@+id/respuestaA3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
         android:text="@string/respuestaa3"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -62,11 +62,12 @@
         app:layout_constraintTop_toBottomOf="@+id/enunciado3"
         tools:text="Respuesta de la opción A" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonB2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:text="@string/b"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/respuestaB3"
@@ -76,8 +77,8 @@
         android:id="@+id/respuestaB3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="88dp"
         android:text="@string/respuestab3"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -85,11 +86,12 @@
         app:layout_constraintTop_toBottomOf="@+id/respuestaA3"
         tools:text="Respuesta de la opción B" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonC3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:text="@string/c"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/respuestaC3"
@@ -99,7 +101,7 @@
         android:id="@+id/respuestaC3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="80dp"
         android:text="@string/respuestac3"
         android:textColor="#000000"

@@ -1,5 +1,6 @@
 package com.igu.pepperprofesor.fragment;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.igu.pepperprofesor.R;
+import com.igu.pepperprofesor.object.Subject;
+import com.igu.pepperprofesor.object.question.OptionQuestion;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,8 +27,8 @@ public class ScoreFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private int nota;
+    private Subject s;
 
     public ScoreFragment() {
         // Required empty public constructor
@@ -52,15 +56,40 @@ public class ScoreFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+            s = (Subject) getArguments().getSerializable("subject");
+            nota = getArguments().getInt("score");
+                   }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_score, container, false);
+        View view = inflater.inflate(R.layout.fragment_score, container, false);
+        TextView t = (TextView) view.findViewById(R.id.score);
+        TextView r = (TextView) view.findViewById(R.id.puntos);
+        TextView n = (TextView) view.findViewById(R.id.notaScore);
+        t.setText(Integer.toString(nota));
+        if (nota < 5) {
+            n.setText("SUSPENDIDO");
+            n.setTextColor(Color.parseColor("#FF0000"));
+            t.setTextColor(Color.parseColor("#FF0000"));
+            r.setTextColor(Color.parseColor("#FF0000"));
+        } else if (nota >= 5 && nota < 7) {
+            n.setText("APROBADO");
+            n.setTextColor(Color.parseColor("#00FF00"));
+            t.setTextColor(Color.parseColor("#00FF00"));
+            r.setTextColor(Color.parseColor("#00FF00"));
+
+        } else if (nota >= 7 && nota < 9) {
+            n.setText("NOTABLE");
+            n.setTextColor(Color.parseColor("#0000FF"));
+            t.setTextColor(Color.parseColor("#0000FF"));
+            r.setTextColor(Color.parseColor("#0000FF"));
+
+        } else  {
+            n.setText("EXCELENTE");
+                    }
+
+        return view;
     }
 }
