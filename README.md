@@ -46,7 +46,7 @@
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary><h2 style="display: inline-block">Índice de contenidos</h2></summary>
+  <summary>Índice de contenidos</summary>
   <ol>
     <li>
       <a href="#sobre-el-proyecto">Sobre el proyecto</a>
@@ -66,7 +66,7 @@
     <li><a href="#contribuir">Contribuir</a></li>
     <li><a href="#licencia">Licencia</a></li>
     <li><a href="#contacto">Contacto</a></li>
-    <li><a href="#agradecimientos">Agradecimientos</a></li>
+    <li><a href="#reconocimientos">Reconocimientos</a></li>
   </ol>
 </details>
 
@@ -167,7 +167,7 @@ Link del proyecto: [https://github.com/gianm99/PepperProfesor](https://github.co
 
 
 <!-- ACKNOWLEDGEMENTS -->
-## Agradecimientos
+## Reconocimientos
 
 * []()
 * []()
