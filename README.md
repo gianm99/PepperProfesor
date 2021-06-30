@@ -38,7 +38,7 @@
   <h3 align="center">Pepper Profesor</h3>
 
   <p align="center">
-    project_description
+    Pepper Profesor es un juego de preguntas para el robot social Pepper
     <br />
   </p>
 
@@ -51,7 +51,7 @@
     <li>
       <a href="#sobre-el-proyecto">Sobre el proyecto</a>
       <ul>
-        <li><a href="#herramientas">Herramientas</a></li>
+        <li><a href="#hecho-con">Hecho con</a></li>
       </ul>
     </li>
     <li>
@@ -75,37 +75,42 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre el proyecto
 
-![Product Name Screen Shot][product-screenshot]
+<p align="center">
+  <a href="https://github.com/gianm99/PepperProfesor">
+    <img src="images/profesor-pepper.png" alt="Logo">
+  </a>
+</p>
+<!-- Poner una foto de la pantalla principal o algo por aquí -->
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`gianm99`, `PepperProfesor`, `twitter_handle`, `gianlucasmartinchamorro@gmail.com`, `project_title`, `project_description`
-
+Pepper Profesor es un **juego de preguntas** de un nivel académico de **educación primaria**. El objetivo es que se cree una interacción entre los usuarios, que se tratarían de alumnos de primaria, y el **robot social Pepper** mediante una serie de preguntas y respuestas. Las preguntas y respuestas que se han definido **simularían un examen** con un número determinado de ejercicios y con **una temática en concreto**. De esta manera, los alumnos podrían comprobar su conocimiento sobre un área específica de una forma más divertida y dinámica, añadiendo el hecho de la **interacción con el robot**, que puede resultar interesante por la tecnología avanzada de la que dispone.
 
 ### Hecho con
 
-* [Android Studio 4.2]()
-* []()
-* []()
+Los frameworks que se han utilizado en este proyecto son los que se listan en este apartado.
 
+* [QiSDK](https://developer.softbankrobotics.com/pepper-qisdk)
 
+Además, estas son las herramientas o aplicaciones que se han utilizado en este desarrollo:
+
+* [Android Studio](https://developer.android.com/studio?hl=es)
+* [Vim](https://www.vim.org/)
+* [Windows Terminal](https://github.com/microsoft/terminal)
+* [Git](https://git-scm.com/) y [GitHub](https://github.com/)
 
 <!-- GETTING STARTED -->
 ## Cómo empezar
 
-To get a local copy up and running follow these simple steps.
+Para obtener una copia local configurada y que funcione, hay que seguir los siguientes sencillos pasos. Esta guía está enfocada al sistema operativo Windows 10.
 
 ### Prerrequisitos
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Antes de poder usar o contribuir a la aplicación, es necesario configurar el entorno de desarrollo.
+* **Android Studio**. Es necesario instalar el IDE para poder el ejecutar la aplicación. Se necesita para poder compilar el código. Simplemente, instalarlo desde la página oficial de [Android Studio](https://developer.android.com/studio?hl=es).
+* **Plug-in de Pepper SDK**. Este plugin se necesita para poder desarrollar aplicaciones de robots en Android. Para poder configurar el entorno y hacer que funcione este plug-in hay que seguir la [guía de instalación](https://developer.softbankrobotics.com/pepper-qisdk/getting-started/installing-pepper-sdk-plug) en la documentación de SoftBank Robotics sobre Pepper QiSDK.
 
 ### Instalación
 
-1. Clone the repo
+1. Clonar el repositorio
    ```sh
    git clone https://github.com/gianm99/PepperProfesor.git
    ```
@@ -169,7 +174,7 @@ Link del proyecto: [https://github.com/gianm99/PepperProfesor](https://github.co
 <!-- ACKNOWLEDGEMENTS -->
 ## Reconocimientos
 
-* []()
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 * []()
 * []()
 
