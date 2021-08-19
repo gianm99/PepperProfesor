@@ -1,4 +1,4 @@
-# IDEAS
+# Ideas para desarrollar
 
 ## Estructura
 
