@@ -7,8 +7,9 @@
 ***
 ***
 *** To avoid retyping too much info. Do a search and replace for the following:
-*** github_username, PepperProfesor, twitter_handle, gianlucasmartinchamorro@gmail.com, Pepper Profesor, Un juego de preguntas con interacción por voz con un robot Pepper
+*** github_username, PepperProfesor, twitter_handle, gianlucasmartinchamorro@gmail.com, Pepper Profesor, project_description
 -->
+
 
 
 <!-- PROJECT SHIELDS -->
@@ -37,7 +38,7 @@
   <h3 align="center">Pepper Profesor</h3>
 
   <p align="center">
-    Un juego de preguntas con interacción por voz con un robot Pepper
+    project_description
     <br />
   </p>
 
@@ -45,7 +46,7 @@
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Tabla de contenidos</summary>
+  <summary>Índice de contenidos</summary>
   <ol>
     <li>
       <a href="#sobre-el-proyecto">Sobre el proyecto</a>
@@ -74,17 +75,24 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre el proyecto
 
-Esta aplicación fue desarrollada en el curso académico 2020-21 como proyecto final de la asignatura de Interfaces Gráficas de Usuario, asignatura optativa en el Grado en Ingeniería Informática en la UIB. 
+![Product Name Screen Shot][product-screenshot]
+
+Here's a blank template to get started:
+**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
+`gianm99`, `PepperProfesor`, `twitter_handle`, `gianlucasmartinchamorro@gmail.com`, `project_title`, `project_description`
+
 
 ### Hecho con
 
-* [Android Studio](https://developer.android.com/studio?hl=es&gclid=CjwKCAjwhOyJBhA4EiwAEcJdcfH5XXWq7PXpHHtVXOzpKxQn6BeLoKmC1IksKQMIzitVVE36tkH4ZBoCwuQQAvD_BwE&gclsrc=aw.ds)
-* [Pepper QiSDK](https://developer.softbankrobotics.com/pepper-qisdk)
+* [Android Studio 4.2]()
+* []()
+* []()
+
+
 
 <!-- GETTING STARTED -->
 ## Cómo empezar
 
-Para obtener una copia local del proyecto que pueda ejecutarse sigue las siguientes instrucciones.
 To get a local copy up and running follow these simple steps.
 
 ### Prerrequisitos
@@ -94,15 +102,19 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install npm@latest -g
   ```
-- [Android Studio](https://developer.android.com/studio?hl=es&gclid=CjwKCAjwhOyJBhA4EiwAEcJdcfH5XXWq7PXpHHtVXOzpKxQn6BeLoKmC1IksKQMIzitVVE36tkH4ZBoCwuQQAvD_BwE&gclsrc=aw.ds)
-- [Plugin de Pepper SDK](https://developer.softbankrobotics.com/pepper-qisdk/getting-started/installing-pepper-sdk-plug)
 
 ### Instalación
 
-1. Clonar el repositorio
+1. Clone the repo
    ```sh
    git clone https://github.com/gianm99/PepperProfesor.git
    ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+
+
 
 <!-- USAGE EXAMPLES -->
 ## Uso
@@ -111,10 +123,14 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
+
+
 <!-- ROADMAP -->
 ## Posibles mejoras
 
 See the [open issues](https://github.com/gianm99/PepperProfesor/issues) for a list of proposed features (and known issues).
+
+
 
 <!-- CONTRIBUTING -->
 ## Contribuir
@@ -127,10 +143,15 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+
+
 <!-- LICENSE -->
 ## Licencia
 
 Distribuido bajo la licencia MIT. Consultar `LICENSE` para más información.
+
+
+
 <!-- CONTACT -->
 ## Contacto
 
@@ -140,7 +161,20 @@ Irene Vera
 
 Tomás Bordoy
 
-<br><br>_Link del proyecto: [https://github.com/gianm99/PepperProfesor](https://github.com/gianm99/PepperProfesor)_
+
+Link del proyecto: [https://github.com/gianm99/PepperProfesor](https://github.com/gianm99/PepperProfesor)
+
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Reconocimientos
+
+* []()
+* []()
+* []()
+
+
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
