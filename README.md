@@ -10,8 +10,6 @@
 *** github_username, PepperProfesor, twitter_handle, gianlucasmartinchamorro@gmail.com, Pepper Profesor, project_description
 -->
 
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -26,8 +24,6 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -41,8 +37,6 @@
     Pepper Profesor es un juego de preguntas para el robot social Pepper
     <br />
   </p>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -70,8 +64,6 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## Sobre el proyecto
 
@@ -80,7 +72,6 @@
     <img src="images/profesor-pepper.png" alt="Logo">
   </a>
 </p>
-<!-- Poner una foto de la pantalla principal o algo por aquí -->
 
 Pepper Profesor es un **juego de preguntas** de un nivel académico de **educación primaria**. El objetivo es que se cree una interacción entre los usuarios, que se tratarían de alumnos de primaria, y el **robot social Pepper** mediante una serie de preguntas y respuestas. Las preguntas y respuestas que se han definido **simularían un examen** con un número determinado de ejercicios y con **una temática en concreto**. De esta manera, los alumnos podrían comprobar su conocimiento sobre un área específica de una forma más divertida y dinámica, añadiendo el hecho de la **interacción con el robot**, que puede resultar interesante por la tecnología avanzada de la que dispone.
 
@@ -114,73 +105,38 @@ Antes de poder usar o contribuir a la aplicación, es necesario configurar el en
    ```sh
    git clone https://github.com/gianm99/PepperProfesor.git
    ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-
-
-
-<!-- USAGE EXAMPLES -->
-## Uso
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
 
 <!-- ROADMAP -->
 ## Posibles mejoras
 
-See the [open issues](https://github.com/gianm99/PepperProfesor/issues) for a list of proposed features (and known issues).
-
-
+Consulta los [issues abiertos](https://github.com/gianm99/PepperProfesor/issues) para ver una lista de funcionalidades propuestas (y problemas conocidos).
 
 <!-- CONTRIBUTING -->
 ## Contribuir
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
+1. Hacer un fork del proyecto
+2. Crear una rama para la funcionalidad (`git checkout -b feature/AmazingFeature`)
+3. Hacer commit de tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Hacer push a la rama (`git push origin feature/AmazingFeature`)
+5. Abrir un pull request
 
 <!-- LICENSE -->
 ## Licencia
 
 Distribuido bajo la licencia MIT. Consultar `LICENSE` para más información.
 
-
-
 <!-- CONTACT -->
 ## Contacto
 
-Gian Lucas Martín - gianlucasmartinchamorro@gmail.com
-
-Irene Vera
-
-Tomás Bordoy
-
-
-Link del proyecto: [https://github.com/gianm99/PepperProfesor](https://github.com/gianm99/PepperProfesor)
-
+- Gian Lucas Martín - gianlucasmartinchamorro@gmail.com
+- Irene Vera
+- Tomás Bordoy
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Reconocimientos
 
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
-* []()
-* []()
-
-
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
