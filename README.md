@@ -22,7 +22,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -58,14 +57,13 @@
     <li><a href="#uso">Uso</a></li>
     <li><a href="#posibles-mejoras">Posibles mejoras</a></li>
     <li><a href="#contribuir">Contribuir</a></li>
-    <li><a href="#licencia">Licencia</a></li>
     <li><a href="#contacto">Contacto</a></li>
     <li><a href="#reconocimientos">Reconocimientos</a></li>
   </ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
-## Sobre el proyecto
+# Sobre el proyecto
 
 <p align="center">
   <a href="https://github.com/gianm99/PepperProfesor">
@@ -75,7 +73,7 @@
 
 Pepper Profesor es un **juego de preguntas** de un nivel académico de **educación primaria**. El objetivo es que se cree una interacción entre los usuarios, que se tratarían de alumnos de primaria, y el **robot social Pepper** mediante una serie de preguntas y respuestas. Las preguntas y respuestas que se han definido **simularían un examen** con un número determinado de ejercicios y con **una temática en concreto**. De esta manera, los alumnos podrían comprobar su conocimiento sobre un área específica de una forma más divertida y dinámica, añadiendo el hecho de la **interacción con el robot**, que puede resultar interesante por la tecnología avanzada de la que dispone.
 
-### Hecho con
+## Hecho con
 
 Los frameworks que se han utilizado en este proyecto son los que se listan en este apartado.
 
@@ -89,17 +87,17 @@ Además, estas son las herramientas o aplicaciones que se han utilizado en este 
 * [Git](https://git-scm.com/) y [GitHub](https://github.com/)
 
 <!-- GETTING STARTED -->
-## Cómo empezar
+# Cómo empezar
 
-Para obtener una copia local configurada y que funcione, hay que seguir los siguientes sencillos pasos. Esta guía está enfocada al sistema operativo Windows 10.
+Para obtener una copia local configurada y que funcione, hay que seguir los siguientes sencillos pasos.
 
-### Prerrequisitos
+## Requisitos
 
 Antes de poder usar o contribuir a la aplicación, es necesario configurar el entorno de desarrollo.
 * **Android Studio**. Es necesario instalar el IDE para poder el ejecutar la aplicación. Se necesita para poder compilar el código. Simplemente, instalarlo desde la página oficial de [Android Studio](https://developer.android.com/studio?hl=es).
 * **Plug-in de Pepper SDK**. Este plugin se necesita para poder desarrollar aplicaciones de robots en Android. Para poder configurar el entorno y hacer que funcione este plug-in hay que seguir la [guía de instalación](https://developer.softbankrobotics.com/pepper-qisdk/getting-started/installing-pepper-sdk-plug) en la documentación de SoftBank Robotics sobre Pepper QiSDK.
 
-### Instalación
+## Instalación
 
 1. Clonar el repositorio
    ```sh
@@ -112,7 +110,7 @@ Antes de poder usar o contribuir a la aplicación, es necesario configurar el en
 Consulta los [issues abiertos](https://github.com/gianm99/PepperProfesor/issues) para ver una lista de funcionalidades propuestas (y problemas conocidos).
 
 <!-- CONTRIBUTING -->
-## Contribuir
+# Contribuir
 
 1. Hacer un fork del proyecto
 2. Crear una rama para la funcionalidad (`git checkout -b feature/AmazingFeature`)
@@ -120,21 +118,16 @@ Consulta los [issues abiertos](https://github.com/gianm99/PepperProfesor/issues)
 4. Hacer push a la rama (`git push origin feature/AmazingFeature`)
 5. Abrir un pull request
 
-<!-- LICENSE -->
-## Licencia
-
-Distribuido bajo la licencia MIT. Consultar `LICENSE` para más información.
-
 <!-- CONTACT -->
-## Contacto
+# Contacto
 
-- Gian Lucas Martín - gianlucasmartinchamorro@gmail.com
+- Gian Lucas Martín
 - Irene Vera
 - Tomás Bordoy
 
 
 <!-- ACKNOWLEDGEMENTS -->
-## Reconocimientos
+# Reconocimientos
 
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 
@@ -149,5 +142,4 @@ Distribuido bajo la licencia MIT. Consultar `LICENSE` para más información.
 [issues-shield]: https://img.shields.io/github/issues/gianm99/PepperProfesor.svg?style=for-the-badge
 [issues-url]: https://github.com/gianm99/PepperProfesor/issues
 [license-shield]: https://img.shields.io/github/license/gianm99/PepperProfesor.svg?style=for-the-badge
-[license-url]: https://github.com/gianm99/PepperProfesor/blob/main/LICENSE
 [product-screenshot]: https://github.com/gianm99/PepperProfesor/blob/main/images/profesor-pepper.png
