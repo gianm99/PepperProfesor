@@ -50,11 +50,9 @@
     <li>
       <a href="#cómo-empezar">Cómo empezar</a>
       <ul>
-        <li><a href="#prerequisitos">Prerequisitos</a></li>
-        <li><a href="#instalación">Instalación</a></li>
+        <li><a href="#prerequisitos">Requisitos</a></li>
       </ul>
     </li>
-    <li><a href="#uso">Uso</a></li>
     <li><a href="#posibles-mejoras">Posibles mejoras</a></li>
     <li><a href="#contribuir">Contribuir</a></li>
     <li><a href="#contacto">Contacto</a></li>
@@ -96,13 +94,6 @@ Para obtener una copia local configurada y que funcione, hay que seguir los sigu
 Antes de poder usar o contribuir a la aplicación, es necesario configurar el entorno de desarrollo.
 * **Android Studio**. Es necesario instalar el IDE para poder el ejecutar la aplicación. Se necesita para poder compilar el código. Simplemente, instalarlo desde la página oficial de [Android Studio](https://developer.android.com/studio?hl=es).
 * **Plug-in de Pepper SDK**. Este plugin se necesita para poder desarrollar aplicaciones de robots en Android. Para poder configurar el entorno y hacer que funcione este plug-in hay que seguir la [guía de instalación](https://developer.softbankrobotics.com/pepper-qisdk/getting-started/installing-pepper-sdk-plug) en la documentación de SoftBank Robotics sobre Pepper QiSDK.
-
-## Instalación
-
-1. Clonar el repositorio
-   ```sh
-   git clone https://github.com/gianm99/PepperProfesor.git
-   ```
 
 <!-- ROADMAP -->
 ## Posibles mejoras
